@@ -1,0 +1,2643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Build A Website That Makes You Money — A Free Guide by WRENTECH</title>
+<meta name="description" content="A step-by-step, brain-friendly guide to building a website that actually makes money. Every step in plain English. No jargon, no fluff, no upsells. Brought to you free by WRENTECH (wrentech.net).">
+<meta property="og:title" content="Build A Website That Makes You Money — Free Guide by WRENTECH">
+<meta property="og:description" content="Plain-English, dyslexia and ADHD-friendly walkthrough of every step to a live, money-making website. From WRENTECH.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   ACCESSIBILITY FIRST — Dyslexia/ADHD/Autism friendly
+   - Atkinson Hyperlegible (designed for low vision/dyslexia)
+   - Off-white background (not pure white — easier on eyes)
+   - Generous line-height (1.7)
+   - Left-aligned text only
+   - High contrast (WCAG AAA on body text)
+   - No autoplay motion
+   - Color-coded sections (predictable structure)
+   ============================================ */
+
+:root {
+  --bg: #FBF6EC;          /* warm cream */
+  --bg-card: #FFFDF7;     /* slightly lighter for cards */
+  --ink: #1A1814;         /* near-black warm */
+  --ink-soft: #4A4438;    /* softer body */
+  --line: #D9CFB8;        /* warm tan border */
+  --line-soft: #EAE0CA;
+
+  /* WRENTECH brand palette — real colors from wrentech.net */
+  --wt-deep:    #0E2419;       /* deep forest — page bg for brand sections */
+  --wt-mid:     #14301E;       /* slightly lighter forest */
+  --wt-card:    #1C3D29;       /* card / lifted section on dark */
+  --wt-line:    #2D4F37;       /* subtle border on dark */
+  --wt-coral:   #E89870;       /* primary accent — buttons, highlights */
+  --wt-coral-2: #F2A981;       /* coral hover/lighter */
+  --wt-coral-3: #D17A52;       /* coral darker / pressed */
+  --wt-cream:   #F5E6D8;       /* primary text on dark */
+  --wt-cream-2: #C4B5A2;       /* secondary muted text */
+  --wt-sage:    #6B8270;       /* tertiary / labels on dark */
+
+  /* Module accent colors — distinct, high-contrast, named so you can FEEL them */
+  --c-welcome: #C8385C;   /* deep rose */
+  --c-plan:    #D97706;   /* burnt orange */
+  --c-build:   #2563EB;   /* royal blue */
+  --c-connect: #0E9F6E;   /* emerald */
+  --c-funnel:  #7C3AED;   /* purple */
+  --c-domain:  #DB2777;   /* magenta */
+  --c-launch:  #DC2626;   /* red */
+  --c-grow:    #0891B2;   /* cyan */
+  --c-help:    #65A30D;   /* lime green */
+
+  --shadow-sm: 0 2px 0 rgba(26,24,20,0.08);
+  --shadow-md: 0 4px 0 rgba(26,24,20,0.12);
+  --shadow-lg: 0 8px 0 rgba(26,24,20,0.15);
+
+  --radius: 14px;
+  --radius-lg: 22px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+  margin: 0;
+  font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ============ TYPOGRAPHY ============ */
+h1, h2, h3, h4 {
+  font-family: 'Sansita', Georgia, serif;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--ink);
+  margin: 0 0 0.5em;
+  letter-spacing: -0.01em;
+}
+h1 { font-size: clamp(2.2rem, 6vw, 4rem); }
+h2 { font-size: clamp(1.7rem, 4vw, 2.6rem); }
+h3 { font-size: clamp(1.3rem, 3vw, 1.7rem); }
+h4 { font-size: 1.15rem; font-weight: 700; }
+
+/* Coral underline on section H2s — WRENTECH brand mark */
+section.module h2 {
+  position: relative;
+  padding-bottom: 14px;
+  display: inline-block;
+}
+section.module h2::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 64px;
+  height: 4px;
+  background: var(--wt-coral);
+  border-radius: 2px;
+}
+
+p { margin: 0 0 1em; max-width: 65ch; }
+strong { font-weight: 700; color: var(--ink); }
+em { font-style: normal; background: rgba(217,118,6,0.18); padding: 0 4px; border-radius: 3px; }
+
+a { color: var(--c-build); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:hover { background: rgba(37,99,235,0.12); }
+a:focus-visible { outline: 3px solid var(--c-plan); outline-offset: 2px; }
+
+/* ============ WRENTECH BRAND BAR (top strip) ============ */
+.wt-brand-bar {
+  background: var(--wt-deep);
+  border-bottom: 1px solid var(--wt-line);
+  padding: 14px 20px;
+  position: relative;
+}
+.wt-brand-bar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.wt-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--wt-coral);
+}
+.wt-logo:hover { background: transparent; color: var(--wt-coral-2); }
+.wt-logo .wt-word {
+  font-family: 'Sansita', Georgia, serif;
+  font-weight: 900;
+  font-size: 1.85rem;
+  letter-spacing: 0.08em;
+  color: var(--wt-coral);
+  line-height: 1;
+}
+.wt-tagline {
+  font-family: 'Sansita', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--wt-cream-2);
+  letter-spacing: 0.01em;
+}
+.wt-tagline a {
+  color: var(--wt-coral);
+  text-decoration: none;
+  font-weight: 600;
+  font-style: italic;
+}
+.wt-tagline a:hover {
+  color: var(--wt-coral-2);
+  background: transparent;
+  text-decoration: underline;
+  text-decoration-color: var(--wt-coral);
+}
+
+/* ============ WRENTECH PRESENTS HERO RIBBON ============ */
+.wt-presents {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 22px;
+  background: var(--wt-deep);
+  border: 2px solid var(--wt-coral);
+  border-radius: 50px;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--wt-cream);
+  margin-bottom: 24px;
+}
+.wt-presents .wt-name {
+  font-family: 'Sansita', Georgia, serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: none;
+  color: var(--wt-coral);
+}
+
+/* ============ STICKY NAV ============ */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  border-bottom: 3px solid var(--ink);
+  padding: 12px 20px;
+}
+.top-nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-family: 'Sansita', serif;
+  font-weight: 900;
+  font-size: 1.1rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+.brand:hover { background: transparent; }
+.brand .dot { color: var(--c-welcome); }
+
+.progress-wrap {
+  flex: 1 1 200px;
+  min-width: 150px;
+  background: var(--line-soft);
+  height: 12px;
+  border-radius: 6px;
+  border: 2px solid var(--ink);
+  overflow: hidden;
+}
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--c-welcome), var(--c-plan), var(--c-build), var(--c-connect), var(--c-funnel));
+  transition: width 0.3s ease;
+}
+.progress-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.menu-btn {
+  background: var(--ink);
+  color: var(--bg);
+  border: 3px solid var(--ink);
+  padding: 6px 14px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.menu-btn:hover { background: var(--c-welcome); border-color: var(--c-welcome); }
+
+/* ============ LAYOUT ============ */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section.module {
+  padding: 60px 0 80px;
+  border-bottom: 3px dashed var(--line);
+}
+
+.module-tag {
+  display: inline-block;
+  padding: 6px 14px;
+  background: var(--accent);
+  color: white;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 50px;
+  margin-bottom: 16px;
+  border: 3px solid var(--ink);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ============ HERO ============ */
+.hero {
+  padding: 80px 0 60px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50px; right: -50px;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, var(--c-plan) 0%, transparent 70%);
+  opacity: 0.15;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -100px; left: -100px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, var(--c-build) 0%, transparent 70%);
+  opacity: 0.12;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.hero h1 { position: relative; }
+.hero h1 .underline {
+  font-family: 'Sansita', Georgia, serif;
+  font-style: italic;
+  font-weight: 900;
+  color: var(--wt-coral-3);
+  padding: 0 2px;
+}
+.hero .tagline {
+  font-size: 1.3rem;
+  max-width: 38ch;
+  color: var(--ink-soft);
+  margin-bottom: 30px;
+}
+
+/* ============ READING-LEVEL CARDS ============ */
+.card {
+  background: var(--bg-card);
+  border: 3px solid var(--ink);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin: 20px 0;
+  box-shadow: var(--shadow-md);
+}
+.card-accent {
+  border-left-width: 10px;
+  border-left-color: var(--accent, var(--c-build));
+}
+
+/* Plain-English callout */
+.plain {
+  background: #FFF9DB;
+  border: 3px solid var(--ink);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  margin: 20px 0;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+}
+.plain::before {
+  content: '🗣️ IN PLAIN ENGLISH';
+  display: block;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+  color: var(--c-plan);
+}
+
+.why {
+  background: #E0F2FE;
+  border: 3px solid var(--ink);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  margin: 20px 0;
+  box-shadow: var(--shadow-sm);
+}
+.why::before {
+  content: '❓ WHY YOU SHOULD CARE';
+  display: block;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+  color: var(--c-build);
+}
+
+.warn {
+  background: #FEE2E2;
+  border: 3px solid var(--ink);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  margin: 20px 0;
+  box-shadow: var(--shadow-sm);
+}
+.warn::before {
+  content: '⚠️ WATCH OUT';
+  display: block;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+  color: var(--c-launch);
+}
+
+.win {
+  background: #DCFCE7;
+  border: 3px solid var(--ink);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  margin: 20px 0;
+  box-shadow: var(--shadow-sm);
+}
+.win::before {
+  content: '✅ DO THIS';
+  display: block;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+  color: var(--c-connect);
+}
+
+/* ============ STEP LIST ============ */
+.steps {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+}
+.steps > li {
+  counter-increment: step;
+  background: var(--bg-card);
+  border: 3px solid var(--ink);
+  border-radius: var(--radius);
+  padding: 22px 24px 22px 70px;
+  margin-bottom: 16px;
+  position: relative;
+  box-shadow: var(--shadow-md);
+}
+.steps > li::before {
+  content: counter(step);
+  position: absolute;
+  left: -3px;
+  top: -3px;
+  width: 50px;
+  height: 50px;
+  background: var(--accent, var(--c-build));
+  color: white;
+  font-family: 'Sansita', serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--ink);
+  border-radius: 12px 0 12px 0;
+}
+.steps > li h4 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+/* ============ OPTION COMPARE ============ */
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+.option {
+  background: var(--bg-card);
+  border: 3px solid var(--ink);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.option.best {
+  border-color: var(--c-connect);
+  background: #F0FDF4;
+}
+.option.best::after {
+  content: '⭐ BEST PICK';
+  position: absolute;
+  top: -16px;
+  right: 14px;
+  background: var(--c-connect);
+  color: white;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 50px;
+  border: 3px solid var(--ink);
+  letter-spacing: 0.05em;
+}
+.option h4 {
+  margin: 0 0 4px;
+  font-size: 1.3rem;
+  font-family: 'Sansita', serif;
+  font-weight: 800;
+}
+.option .price {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin-bottom: 12px;
+}
+.option .price.free { color: var(--c-connect); }
+.option ul { padding-left: 22px; margin: 8px 0; }
+.option ul li { margin-bottom: 6px; }
+.option .pros { color: var(--c-connect); font-weight: 700; }
+.option .cons { color: var(--c-launch); font-weight: 700; }
+.option a.btn-link {
+  display: inline-block;
+  margin-top: auto;
+  padding: 10px 18px;
+  background: var(--ink);
+  color: var(--bg);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  text-align: center;
+  border: 3px solid var(--ink);
+}
+.option a.btn-link:hover {
+  background: var(--accent, var(--c-build));
+  border-color: var(--ink);
+}
+
+/* ============ ACCORDION ============ */
+details.accordion {
+  background: var(--bg-card);
+  border: 3px solid var(--ink);
+  border-radius: var(--radius);
+  margin: 12px 0;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+details.accordion[open] { box-shadow: var(--shadow-md); }
+details.accordion summary {
+  padding: 16px 22px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+details.accordion summary::-webkit-details-marker { display: none; }
+details.accordion summary::before {
+  content: '➕';
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+details.accordion[open] summary::before { content: '➖'; }
+details.accordion .acc-body {
+  padding: 0 22px 20px;
+  border-top: 2px dashed var(--line);
+  padding-top: 16px;
+  margin-top: 4px;
+}
+
+/* ============ TABS ============ */
+.tabs {
+  margin: 30px 0;
+  background: var(--bg-card);
+  border: 3px solid var(--ink);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  background: var(--ink);
+  gap: 0;
+}
+.tab-buttons button {
+  flex: 1 1 auto;
+  background: var(--ink);
+  color: var(--bg);
+  border: none;
+  padding: 14px 18px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border-right: 2px solid var(--bg);
+  transition: background 0.15s;
+}
+.tab-buttons button:last-child { border-right: none; }
+.tab-buttons button.active {
+  background: var(--accent, var(--c-build));
+  color: white;
+}
+.tab-buttons button:hover:not(.active) { background: #333028; }
+.tab-content {
+  padding: 24px;
+  display: none;
+}
+.tab-content.active { display: block; }
+
+/* ============ BUTTONS / CTAs ============ */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: var(--ink);
+  color: var(--bg);
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  border: 3px solid var(--ink);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.1s;
+  cursor: pointer;
+  font-family: inherit;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  background: var(--accent, var(--c-build));
+  border-color: var(--ink);
+}
+.btn:active { transform: translateY(0); box-shadow: var(--shadow-sm); }
+.btn.big { padding: 18px 36px; font-size: 1.2rem; }
+.btn-group { display: flex; gap: 14px; flex-wrap: wrap; margin: 24px 0; }
+
+/* ============ TOC / MENU OVERLAY ============ */
+.toc-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(26,24,20,0.6);
+  z-index: 200;
+  padding: 20px;
+  overflow-y: auto;
+}
+.toc-overlay.open { display: block; }
+.toc-panel {
+  max-width: 600px;
+  margin: 40px auto;
+  background: var(--bg);
+  border: 4px solid var(--ink);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  box-shadow: 0 12px 0 rgba(0,0,0,0.3);
+}
+.toc-panel h2 { margin-top: 0; }
+.toc-list { list-style: none; padding: 0; counter-reset: toc; }
+.toc-list li {
+  counter-increment: toc;
+  margin-bottom: 4px;
+}
+.toc-list a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 700;
+  border: 2px solid transparent;
+}
+.toc-list a:hover {
+  background: var(--bg-card);
+  border-color: var(--ink);
+}
+.toc-list a::before {
+  content: counter(toc, decimal-leading-zero);
+  font-family: 'Sansita', serif;
+  font-size: 1.4rem;
+  color: var(--c-welcome);
+  font-weight: 900;
+}
+.close-toc {
+  position: sticky;
+  top: 10px;
+  float: right;
+  background: var(--c-launch);
+  color: white;
+  border: 3px solid var(--ink);
+  padding: 8px 16px;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* ============ DECISION TREE ============ */
+.decision {
+  background: var(--bg-card);
+  border: 3px solid var(--ink);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin: 30px 0;
+  box-shadow: var(--shadow-lg);
+}
+.decision-q { font-weight: 700; font-size: 1.15rem; margin-bottom: 14px; }
+.decision-choices { display: grid; grid-template-columns: 1fr; gap: 10px; }
+.decision-choices button {
+  background: var(--bg);
+  border: 3px solid var(--ink);
+  padding: 14px 18px;
+  text-align: left;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+.decision-choices button:hover {
+  background: var(--accent, var(--c-build));
+  color: white;
+}
+.decision-result {
+  margin-top: 20px;
+  padding: 18px;
+  background: #FFF9DB;
+  border: 3px solid var(--ink);
+  border-radius: 10px;
+  display: none;
+}
+.decision-result.show { display: block; }
+
+/* ============ GLOSSARY ============ */
+.glossary-term {
+  border-bottom: 2px dotted var(--c-plan);
+  cursor: help;
+}
+
+.glossary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+.glossary-card {
+  background: var(--bg-card);
+  border: 3px solid var(--ink);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow-sm);
+}
+.glossary-card h4 {
+  margin: 0 0 8px;
+  color: var(--c-funnel);
+  font-family: 'Sansita', serif;
+}
+
+/* ============ CHECKLIST ============ */
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+.checklist li {
+  background: var(--bg-card);
+  border: 3px solid var(--ink);
+  border-radius: 10px;
+  padding: 12px 16px 12px 50px;
+  margin-bottom: 10px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: var(--shadow-sm);
+}
+.checklist li::before {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--ink);
+  border-radius: 6px;
+  background: var(--bg);
+}
+.checklist li.done {
+  background: #DCFCE7;
+  text-decoration: line-through;
+  color: var(--ink-soft);
+}
+.checklist li.done::before {
+  background: var(--c-connect);
+  content: '✓';
+  color: white;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+/* ============ FOOTER — WRENTECH BRANDED ============ */
+footer {
+  padding: 80px 20px 60px;
+  background: var(--wt-deep);
+  color: var(--wt-cream-2);
+  position: relative;
+  border-top: 1px solid var(--wt-line);
+}
+footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(232,152,112,0.04) 0%, transparent 30%),
+    radial-gradient(ellipse at 90% 110%, rgba(232,152,112,0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+footer .container { max-width: 800px; position: relative; z-index: 1; }
+footer h2 {
+  font-family: 'Sansita', Georgia, serif;
+  font-weight: 900;
+  color: var(--wt-cream);
+  letter-spacing: -0.01em;
+}
+footer h2 .accent {
+  font-style: italic;
+  color: var(--wt-coral);
+}
+footer p {
+  color: var(--wt-cream-2);
+}
+footer a {
+  color: var(--wt-coral);
+  text-decoration-color: rgba(232,152,112,0.4);
+}
+footer a:hover {
+  background: transparent;
+  color: var(--wt-coral-2);
+}
+
+.wt-footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 40px 0 24px;
+  padding: 36px 32px;
+  background: var(--wt-mid);
+  border: 1px solid var(--wt-line);
+  border-left: 4px solid var(--wt-coral);
+  border-radius: 4px;
+}
+.wt-footer-logo .wt-word-big {
+  font-family: 'Sansita', Georgia, serif;
+  font-weight: 900;
+  font-size: clamp(2.4rem, 8vw, 3.6rem);
+  letter-spacing: 0.04em;
+  color: var(--wt-cream);
+  line-height: 0.95;
+  margin-bottom: 6px;
+}
+.wt-footer-logo .wt-tag-line {
+  font-family: 'Sansita', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.05rem;
+  color: var(--wt-cream-2);
+  letter-spacing: 0.01em;
+}
+
+.wt-cta-pill {
+  display: inline-block;
+  padding: 16px 36px;
+  background: var(--wt-coral);
+  color: var(--wt-deep);
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-top: 14px;
+  transition: background 0.15s, transform 0.1s;
+  border: 2px solid var(--wt-coral);
+}
+.wt-cta-pill:hover {
+  background: var(--wt-coral-2);
+  border-color: var(--wt-coral-2);
+  color: var(--wt-deep);
+  transform: translateY(-2px);
+}
+
+/* ============ MOBILE ============ */
+@media (max-width: 640px) {
+  body { font-size: 17px; }
+  .steps > li { padding-left: 60px; padding-right: 18px; }
+  .steps > li::before { width: 44px; height: 44px; font-size: 1.3rem; }
+  .tab-buttons button { padding: 12px 10px; font-size: 0.85rem; }
+  .hero { padding: 50px 0 40px; }
+  section.module { padding: 40px 0 50px; }
+  .progress-label { display: none; }
+}
+
+/* Reduce motion for those who need it */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* Print-friendly */
+@media print {
+  .top-nav, .toc-overlay, .btn-group { display: none; }
+  body { background: white; }
+  .card, .option, details { page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ WRENTECH BRAND BAR ============ -->
+<div class="wt-brand-bar" role="banner">
+  <div class="wt-brand-bar-inner">
+    <a href="https://wrentech.net" class="wt-logo" target="_blank" rel="noopener" aria-label="WRENTECH home">
+      <span class="wt-word">WRENTECH</span>
+    </a>
+    <div class="wt-tagline">
+      A free guide brought to you by <a href="https://wrentech.net" target="_blank" rel="noopener">wrentech.net</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ STICKY TOP NAV ============ -->
+<nav class="top-nav" aria-label="Main">
+  <div class="top-nav-inner">
+    <a href="#top" class="brand" aria-label="The guide home">The<span class="dot">·</span>Guide</a>
+    <div class="progress-wrap" aria-hidden="true">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <span class="progress-label" id="progressLabel">0% read</span>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰ Menu</button>
+  </div>
+</nav>
+
+<!-- ============ TOC OVERLAY ============ -->
+<div class="toc-overlay" id="tocOverlay" role="dialog" aria-modal="true" aria-label="Table of contents">
+  <div class="toc-panel">
+    <button class="close-toc" id="closeToc" aria-label="Close menu">✕ Close</button>
+    <h2>Jump to any step</h2>
+    <p>You don't have to do this in order. But the first time? Top to bottom is easiest.</p>
+    <ol class="toc-list">
+      <li><a href="#welcome">Welcome &amp; how this works</a></li>
+      <li><a href="#what-is">What a website actually does</a></li>
+      <li><a href="#plan">Plan your ONE goal</a></li>
+      <li><a href="#path">Choose your path (pick one)</a></li>
+      <li><a href="#accounts">Set up your free accounts</a></li>
+      <li><a href="#build">Build the actual site</a></li>
+      <li><a href="#buttons">Make the buttons work</a></li>
+      <li><a href="#calendar">Add a calendar (bookings)</a></li>
+      <li><a href="#email">Capture emails (your list)</a></li>
+      <li><a href="#funnel">Design a funnel that converts</a></li>
+      <li><a href="#domain">Get a domain name</a></li>
+      <li><a href="#connect-domain">Connect your domain</a></li>
+      <li><a href="#mobile">Make it mobile-friendly</a></li>
+      <li><a href="#found">Get found (Google + AI)</a></li>
+      <li><a href="#tools">Download the tools you need</a></li>
+      <li><a href="#platforms">Mac vs PC vs Phone</a></li>
+      <li><a href="#glossary">Glossary (words explained)</a></li>
+      <li><a href="#stuck">If you get stuck</a></li>
+    </ol>
+  </div>
+</div>
+
+<a id="top"></a>
+
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="welcome">
+  <div class="container">
+    <div class="wt-presents">
+      <span>Presented by</span>
+      <span class="wt-name">WRENTECH</span>
+    </div>
+    <span class="module-tag" style="--accent: var(--c-welcome)">Start here</span>
+    <h1>Build a website that <span class="underline">actually makes you money.</span></h1>
+    <p class="tagline">No coding background. No money to burn. No tech bros telling you what to do. Every step is in plain English. We promise.</p>
+    <div class="btn-group">
+      <a href="#what-is" class="btn big" style="--accent: var(--c-welcome)">Let's go →</a>
+      <a href="#path" class="btn" style="background: var(--bg-card); color: var(--ink);">I just want to pick my path</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MODULE: HOW THIS WORKS ============ -->
+<section class="module" style="--accent: var(--c-welcome)">
+  <div class="container">
+    <span class="module-tag">How this guide works</span>
+    <h2>Read this first. It'll save you hours.</h2>
+
+    <div class="plain">
+      <p>This guide is built for <strong>real humans</strong>. ADHD brains. Dyslexic brains. Autistic brains. Tired brains. Single-parent-at-2-AM brains. If you've never built a website, this is your starting line.</p>
+    </div>
+
+    <h3>How to use this</h3>
+    <ol class="steps">
+      <li>
+        <h4>Skim the menu (top right corner)</h4>
+        <p>See all the steps in one place. Tap any one to jump to it.</p>
+      </li>
+      <li>
+        <h4>Do ONE step at a time</h4>
+        <p>Don't read ahead. Don't try to memorize. Just do the step in front of you, then come back.</p>
+      </li>
+      <li>
+        <h4>Look for the colored boxes</h4>
+        <p>Yellow = plain-English translation. Blue = why it matters. Green = do this. Red = avoid this.</p>
+      </li>
+      <li>
+        <h4>The checkboxes save your spot</h4>
+        <p>Tap them as you go. They stay checked even if you close the page (as long as it's the same browser).</p>
+      </li>
+      <li>
+        <h4>You can take breaks</h4>
+        <p>This whole thing takes 4&ndash;12 hours depending on your pace and your path. Spread it over a week if that's what your brain needs. The internet will wait.</p>
+      </li>
+    </ol>
+
+    <div class="why">
+      <p>Most "how to build a website" guides assume you already know what HTML is, what a domain is, what hosting is. <strong>We assume you don't.</strong> If we use a word you don't know, we explain it on the spot OR it's underlined like <span class="glossary-term">this</span> and you can find it in the glossary at the bottom.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MODULE: WHAT IS A WEBSITE ============ -->
+<section class="module" id="what-is" style="--accent: var(--c-welcome)">
+  <div class="container">
+    <span class="module-tag">Module 1</span>
+    <h2>What a website actually is</h2>
+    <p>Before you build anything, you need to know what you're actually building. Here it is, no jargon:</p>
+
+    <div class="card card-accent">
+      <h3>A website has 3 parts</h3>
+      <p><strong>1. The front (the part people SEE)</strong><br>Pictures. Words. Buttons. Forms. The pretty stuff. Tech people call this the "frontend."</p>
+      <p><strong>2. The back (the part that DOES things)</strong><br>When someone fills out a form, something has to actually receive that info and save it. That invisible machinery is the "backend."</p>
+      <p><strong>3. The address (where it LIVES)</strong><br>Your website needs to live somewhere on the internet (called <em>hosting</em>) and have an address people can type in (called a <em>domain</em>, like yourname.com).</p>
+    </div>
+
+    <div class="plain">
+      <p>Think of it like a restaurant. <strong>Frontend</strong> is the dining room (what customers see). <strong>Backend</strong> is the kitchen (where the actual work happens). <strong>Hosting</strong> is the building itself. <strong>Domain</strong> is the street address.</p>
+    </div>
+
+    <h3>What a website is supposed to DO for your business</h3>
+    <p>A website is not a digital business card. It's a 24/7 employee that does ONE of these jobs:</p>
+
+    <div class="compare-grid">
+      <div class="option">
+        <h4>📞 Get them to call/book</h4>
+        <p>Best for: service businesses. Therapists, contractors, photographers, healers, coaches.</p>
+        <p class="pros">Goal: Calendar booking or phone call</p>
+      </div>
+      <div class="option">
+        <h4>💌 Get their email</h4>
+        <p>Best for: people not ready to buy yet. Writers, course creators, consultants.</p>
+        <p class="pros">Goal: Email signup → nurture → sale later</p>
+      </div>
+      <div class="option">
+        <h4>🛒 Get them to buy NOW</h4>
+        <p>Best for: products, digital downloads, low-priced services.</p>
+        <p class="pros">Goal: Click → checkout → done</p>
+      </div>
+    </div>
+
+    <div class="warn">
+      <p>If your website tries to do all 3 at once, it will do none of them well. Pick ONE main goal. Everything on the page should push toward that goal. We'll come back to this in Module 2.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MODULE: PLAN ============ -->
+<section class="module" id="plan" style="--accent: var(--c-plan)">
+  <div class="container">
+    <span class="module-tag">Module 2</span>
+    <h2>Plan your ONE goal</h2>
+    <p>Before you touch a single tool, answer these questions. Out loud. Or write them down. Whatever works for your brain.</p>
+
+    <div class="card card-accent">
+      <h3>The 5 questions</h3>
+      <ol>
+        <li><strong>Who is this for?</strong> One specific person, not "everyone."</li>
+        <li><strong>What problem do you solve for them?</strong> In one sentence.</li>
+        <li><strong>What do you want them to DO when they land on your site?</strong> One action.</li>
+        <li><strong>What would make them trust you in 10 seconds?</strong> Photos? Reviews? Credentials?</li>
+        <li><strong>What's stopping them from doing it?</strong> Price? Fear? They don't know you?</li>
+      </ol>
+    </div>
+
+    <div class="plain">
+      <p>Example: "I'm Cindy. I help anxious women in their 40s breathe through panic attacks. When someone lands on my site, I want them to <strong>book a free 15-minute call</strong>. They'll trust me because I have 200+ testimonials. They're scared it'll be expensive, so I need to lead with the FREE call."</p>
+    </div>
+
+    <h3>The 3-second test</h3>
+    <p>When someone lands on your homepage, they should know within 3 seconds:</p>
+    <ul class="checklist" data-store="3sec">
+      <li>What you do</li>
+      <li>Who it's for</li>
+      <li>What to click next</li>
+    </ul>
+
+    <div class="warn">
+      <p>If your homepage says "Welcome to my site!" you've already lost. Welcome is what your <em>door</em> says. Your homepage needs to be a sales pitch, not a greeting.</p>
+    </div>
+
+    <h3>Write your "one-liner" right now</h3>
+    <p>Fill in the blanks. Out loud. Then write it down:</p>
+    <div class="card">
+      <p style="font-size: 1.15rem;"><strong>"I help <em>[who]</em> do <em>[what]</em> so they can <em>[result]</em>."</strong></p>
+      <p style="margin-top: 12px; color: var(--ink-soft);">Examples:</p>
+      <ul>
+        <li>"I help <em>burnt-out moms</em> create <em>30-minute home workouts</em> so they can <em>feel strong without leaving the house</em>."</li>
+        <li>"I help <em>small business owners</em> with their <em>bookkeeping</em> so they can <em>stop dreading tax season</em>."</li>
+        <li>"I help <em>indie authors</em> design <em>book covers that sell</em> so they can <em>compete with traditional publishers</em>."</li>
+      </ul>
+    </div>
+
+    <div class="why">
+      <p>This one-liner becomes the headline at the top of your homepage. It tells visitors in 5 seconds whether you're for them. Without it, they leave.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MODULE: PICK YOUR PATH ============ -->
+<section class="module" id="path" style="--accent: var(--c-build)">
+  <div class="container">
+    <span class="module-tag">Module 3</span>
+    <h2>Pick your path. There are 3.</h2>
+    <p>There's no "best" way to build a website. There's the way that matches <strong>your brain right now</strong>. Tap the question to find yours:</p>
+
+    <div class="decision">
+      <p class="decision-q">Which describes you most?</p>
+      <div class="decision-choices">
+        <button data-result="path-a">A) "I want to drag-and-drop. I never want to see code. I want it done this weekend."</button>
+        <button data-result="path-b">B) "I want AI to do the work but I want it to look custom. I'm patient."</button>
+        <button data-result="path-c">C) "I'm curious about code. I want to actually learn this. I want full control."</button>
+      </div>
+      <div class="decision-result" id="path-result">
+        <strong>Your path: <span id="path-name"></span></strong>
+        <p id="path-detail"></p>
+      </div>
+    </div>
+
+    <h3>What each path actually means</h3>
+
+    <div class="tabs">
+      <div class="tab-buttons">
+        <button class="active" data-tab="path-a-tab">A: Drag-and-Drop</button>
+        <button data-tab="path-b-tab">B: AI-Assisted</button>
+        <button data-tab="path-c-tab">C: Code (with help)</button>
+      </div>
+
+      <div class="tab-content active" id="path-a-tab">
+        <h4>Path A: Drag-and-drop builders</h4>
+        <p>You log into a website. You click "add a button." You type your words. You hit publish. Done.</p>
+        <p><strong>Time to live site:</strong> 2&ndash;6 hours, first try</p>
+        <p><strong>Monthly cost:</strong> $0 to start. $10&ndash;19/month if you want a custom domain.</p>
+        <p><strong>Best tools:</strong></p>
+        <div class="compare-grid">
+          <div class="option best">
+            <h4>Carrd</h4>
+            <p class="price free">FREE for single-page sites. $19/year for full access.</p>
+            <p>The simplest builder on the internet. One page. Beautiful templates. Connect a form, a calendar, a payment link, and you're done.</p>
+            <p class="pros">✔ Easiest learning curve</p>
+            <p class="pros">✔ Fast loading</p>
+            <p class="cons">✘ Single-page only on free</p>
+            <a class="btn-link" href="https://carrd.co" target="_blank" rel="noopener">Visit carrd.co →</a>
+          </div>
+          <div class="option">
+            <h4>Framer (free tier)</h4>
+            <p class="price free">FREE on a *.framer.website subdomain. $5&ndash;15/month for custom domain.</p>
+            <p>Way more design freedom. Beautiful animations baked in. Steeper learning curve than Carrd but you can build a full multi-page site.</p>
+            <p class="pros">✔ Professional designs out of the box</p>
+            <p class="pros">✔ Great for portfolios &amp; agencies</p>
+            <p class="cons">✘ Free version has Framer branding</p>
+            <a class="btn-link" href="https://framer.com" target="_blank" rel="noopener">Visit framer.com →</a>
+          </div>
+          <div class="option">
+            <h4>Webflow (free tier)</h4>
+            <p class="price free">FREE on a *.webflow.io subdomain. $14&ndash;39/month for custom domain.</p>
+            <p>The most powerful drag-and-drop, but the learning curve is real. Like learning Photoshop. Worth it if you'll use it a lot.</p>
+            <p class="pros">✔ Truly professional output</p>
+            <p class="cons">✘ Steepest learning curve in this group</p>
+            <a class="btn-link" href="https://webflow.com" target="_blank" rel="noopener">Visit webflow.com →</a>
+          </div>
+        </div>
+        <div class="warn">
+          <p>We did NOT recommend Wix, Squarespace, or GoDaddy Website Builder. Here's why: they look easy but lock your content inside their platform. If you ever want to move, you have to rebuild from scratch. They also charge $20&ndash;40/month with hidden fees on top. Carrd and Framer are cleaner.</p>
+        </div>
+      </div>
+
+      <div class="tab-content" id="path-b-tab">
+        <h4>Path B: Tell AI what you want, it builds it</h4>
+        <p>You describe your site in plain English. AI writes the code. You preview it. You ask for changes. Repeat until it's right. Then you publish.</p>
+        <p><strong>Time to live site:</strong> 4&ndash;10 hours, first try (longer if you want it custom)</p>
+        <p><strong>Monthly cost:</strong> $0&ndash;20/month depending on which AI you pick</p>
+        <p><strong>Best tools (free first):</strong></p>
+        <div class="compare-grid">
+          <div class="option best">
+            <h4>Claude.ai (free)</h4>
+            <p class="price free">FREE tier, no credit card. $20/mo for more usage.</p>
+            <p>The AI you're probably talking to right now. Ask Claude: "Build me a one-page site for a dog walking business with a contact form and a booking calendar." It writes the HTML. You copy-paste it.</p>
+            <p class="pros">✔ Best at long, complex requests</p>
+            <p class="pros">✔ Honest about what it can/can't do</p>
+            <a class="btn-link" href="https://claude.ai" target="_blank" rel="noopener">Visit claude.ai →</a>
+          </div>
+          <div class="option">
+            <h4>v0.dev (by Vercel)</h4>
+            <p class="price free">FREE with daily limit. $20/mo Pro.</p>
+            <p>Describe a page. v0 shows you a working preview instantly. You tweak with words. When done, deploy in one click.</p>
+            <p class="pros">✔ Visual previews as you build</p>
+            <p class="cons">✘ Daily message limit on free</p>
+            <a class="btn-link" href="https://v0.dev" target="_blank" rel="noopener">Visit v0.dev →</a>
+          </div>
+          <div class="option">
+            <h4>Bolt.new</h4>
+            <p class="price free">FREE tier limited. $20/mo Pro.</p>
+            <p>Type a prompt, watch a full project get built in your browser. Good for prototypes. Can be glitchy.</p>
+            <p class="pros">✔ Full app, not just a page</p>
+            <p class="cons">✘ Can hit token limits fast</p>
+            <a class="btn-link" href="https://bolt.new" target="_blank" rel="noopener">Visit bolt.new →</a>
+          </div>
+          <div class="option">
+            <h4>Lovable</h4>
+            <p class="price free">FREE 5 prompts/day. $20+/mo.</p>
+            <p>Similar to v0 and Bolt. Great for full apps with logins, databases, etc.</p>
+            <p class="pros">✔ Handles full apps with backend</p>
+            <p class="cons">✘ Aggressive paywall</p>
+            <a class="btn-link" href="https://lovable.dev" target="_blank" rel="noopener">Visit lovable.dev →</a>
+          </div>
+        </div>
+        <div class="why">
+          <p>For Path B, we recommend starting with <strong>Claude.ai (free)</strong>. Why: no daily limit on the message you can SEND (only on volume per 5 hours), no time pressure, no surprise paywall mid-build, and you can copy the code anywhere. v0 and Bolt are slicker but lock you into their platforms.</p>
+        </div>
+      </div>
+
+      <div class="tab-content" id="path-c-tab">
+        <h4>Path C: You write code (with AI helping)</h4>
+        <p>You install a "code editor" (a fancy notepad for writing websites). AI lives inside it. You can see what changes the AI makes. You learn as you go. When something breaks, you can fix it yourself.</p>
+        <p><strong>Time to live site:</strong> 1&ndash;3 days for your first site</p>
+        <p><strong>Monthly cost:</strong> $0&ndash;20/month</p>
+        <p><strong>The 3 tools you'll use:</strong></p>
+        <div class="compare-grid">
+          <div class="option best">
+            <h4>Cursor</h4>
+            <p class="price free">FREE Hobby tier. $20/mo Pro.</p>
+            <p>The most beginner-friendly code editor with AI built in. You hit Cmd/Ctrl+K, type what you want, AI writes the code. You can chat with your whole project.</p>
+            <p class="pros">✔ Best AI integration for beginners</p>
+            <p class="pros">✔ Free tier is generous</p>
+            <a class="btn-link" href="https://cursor.com" target="_blank" rel="noopener">Visit cursor.com →</a>
+          </div>
+          <div class="option">
+            <h4>VS Code + Copilot</h4>
+            <p class="price free">VS Code FREE. Copilot $10/mo (free for students).</p>
+            <p>The standard code editor most pros use. Microsoft owns it. Pair it with GitHub Copilot for AI help.</p>
+            <p class="pros">✔ Industry standard</p>
+            <p class="cons">✘ Less polished AI than Cursor</p>
+            <a class="btn-link" href="https://code.visualstudio.com" target="_blank" rel="noopener">code.visualstudio.com →</a>
+          </div>
+          <div class="option">
+            <h4>Claude Code (CLI)</h4>
+            <p class="price">$20/mo or pay-as-you-go API.</p>
+            <p>A more advanced tool: Claude works directly in your terminal (the black screen with text). It can read your whole project, run commands, and fix bugs. Best after you've done one site.</p>
+            <p class="pros">✔ Most powerful AI coding tool</p>
+            <p class="cons">✘ Steeper learning curve</p>
+            <a class="btn-link" href="https://claude.com/product/claude-code" target="_blank" rel="noopener">claude.com/claude-code →</a>
+          </div>
+        </div>
+        <p>If you've never coded before, start with <strong>Cursor (free)</strong>. We walk you through downloading and using it in <a href="#tools">Module 15</a>.</p>
+      </div>
+    </div>
+
+    <div class="plain">
+      <p><strong>Picked your path? Good.</strong> The rest of this guide works for all 3. We'll tell you when something is specific to one path.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MODULE: ACCOUNTS ============ -->
+<section class="module" id="accounts" style="--accent: var(--c-build)">
+  <div class="container">
+    <span class="module-tag">Module 4</span>
+    <h2>Set up your free accounts (the boring but critical part)</h2>
+    <p>You need a few free accounts before you can do anything. Make these now. It'll take 20 minutes total. Get them all done in one sitting so you don't have to come back.</p>
+
+    <div class="why">
+      <p>These accounts are what hold your website, your form data, your email list, and your domain. Without them, you're building on sand. The good news: every one of these has a real free tier you can stay on forever.</p>
+    </div>
+
+    <h3>The 5 accounts you need (in order)</h3>
+
+    <ol class="steps" style="--accent: var(--c-build)">
+
+      <li>
+        <h4>Email address you'll actually check</h4>
+        <p>Use an email you check daily. Not your personal "myname1987@aol.com" you haven't logged into since 2015. Make a new free Gmail if you need one: <a href="https://gmail.com" target="_blank" rel="noopener">gmail.com</a></p>
+        <p><strong>Tip:</strong> Use something like <em>yourname.work@gmail.com</em> or <em>yourbusinessname@gmail.com</em>. You can upgrade to a custom email (you@yourbusiness.com) later.</p>
+      </li>
+
+      <li>
+        <h4>GitHub (free) — where your code lives</h4>
+        <p>GitHub is like Google Drive but for code. Even if you don't write code yourself, your website's code will live here. It's free forever for what you need.</p>
+        <ol type="a">
+          <li>Go to <a href="https://github.com/signup" target="_blank" rel="noopener">github.com/signup</a></li>
+          <li>Use the email from step 1</li>
+          <li>Pick a username. <strong>This is public.</strong> Use something professional. Examples: <em>jenna-west</em>, <em>floraflowerfarm</em>. Avoid numbers if you can.</li>
+          <li>Verify the email they send you</li>
+          <li>Skip every "upgrade to Pro" screen. The free tier is fine.</li>
+        </ol>
+        <div class="plain">
+          <p><strong>What's GitHub for?</strong> Two things. (1) It saves every version of your site, so if you break something you can roll back. (2) It connects to your hosting (Vercel/Netlify) so when you save a change, your live website updates automatically.</p>
+        </div>
+      </li>
+
+      <li>
+        <h4>Vercel OR Netlify (free) — where your site is hosted</h4>
+        <p>This is where your website actually lives on the internet. Both are free for personal/small business use. <strong>Pick ONE. Don't make both.</strong></p>
+        <div class="compare-grid">
+          <div class="option best">
+            <h4>Vercel</h4>
+            <p class="price free">FREE. Forever. For most small sites.</p>
+            <p>Pick this if you'll use Next.js, React, or any modern AI builder (v0, Bolt, Lovable all deploy here). Sign in with your GitHub account &mdash; no separate password.</p>
+            <a class="btn-link" href="https://vercel.com/signup" target="_blank" rel="noopener">vercel.com/signup →</a>
+          </div>
+          <div class="option">
+            <h4>Netlify</h4>
+            <p class="price free">FREE. Forever. For most small sites.</p>
+            <p>Pick this if you're building a simple HTML site or using Carrd-style tools. Has built-in form handling (no extra service needed). Sign in with GitHub too.</p>
+            <a class="btn-link" href="https://app.netlify.com/signup" target="_blank" rel="noopener">netlify.com/signup →</a>
+          </div>
+        </div>
+        <div class="warn">
+          <p>Do NOT sign up for Vercel <em>and</em> Netlify. Pick one. Your future self will thank you. If you don't know which, pick <strong>Vercel</strong> &mdash; it works with more AI tools.</p>
+        </div>
+      </li>
+
+      <li>
+        <h4>MailerLite (free) — your email list</h4>
+        <p>When people give you their email, it has to go somewhere. MailerLite holds those emails and lets you send newsletters. The free plan covers up to <strong>1,000 subscribers and 12,000 emails per month</strong>. That's more than enough for your first year.</p>
+        <ol type="a">
+          <li>Go to <a href="https://www.mailerlite.com" target="_blank" rel="noopener">mailerlite.com</a></li>
+          <li>Click "Sign up free"</li>
+          <li>They'll ask you what you do. Be honest &mdash; if you have a business idea, type it. They approve most accounts within 24 hours.</li>
+        </ol>
+        <div class="plain">
+          <p><strong>Why MailerLite and not Mailchimp?</strong> Mailchimp's free plan is now junk (only 500 contacts, limited features). MailerLite's free plan is actually usable. It also has a built-in landing page builder if you want a backup option.</p>
+        </div>
+      </li>
+
+      <li>
+        <h4>Cal.com (free) — your booking calendar</h4>
+        <p>If you want people to book appointments with you, you need this. Cal.com is the open-source version of Calendly. Free for individual use, forever.</p>
+        <ol type="a">
+          <li>Go to <a href="https://cal.com/signup" target="_blank" rel="noopener">cal.com/signup</a></li>
+          <li>Sign up with Google (easiest) or email</li>
+          <li>Pick your username. This becomes your booking URL: <em>cal.com/yourusername</em></li>
+          <li>Connect your Google Calendar / Apple Calendar / Outlook so it knows when you're busy</li>
+          <li>Set your default event (15-min call, 30-min consult, etc.)</li>
+        </ol>
+        <div class="why">
+          <p><strong>Why Cal.com over Calendly?</strong> Calendly's free plan only allows ONE event type. Cal.com lets you have multiple (free call, paid session, follow-up) on the free plan. Also Cal.com is open source, which means it's not going to suddenly paywall everything in 2 years.</p>
+        </div>
+      </li>
+
+    </ol>
+
+    <h3>Checklist: am I done?</h3>
+    <ul class="checklist" data-store="accounts">
+      <li>I have a working email I check daily</li>
+      <li>I have a GitHub account (free)</li>
+      <li>I have either Vercel OR Netlify (not both)</li>
+      <li>I have MailerLite (free)</li>
+      <li>I have Cal.com (free)</li>
+      <li>I wrote down all 5 passwords somewhere safe (a password manager, a notebook, anywhere except a sticky note on your monitor)</li>
+    </ul>
+
+    <div class="warn">
+      <p><strong>About passwords:</strong> Write them down. In a notebook. Or use a free password manager like <a href="https://bitwarden.com" target="_blank" rel="noopener">Bitwarden</a>. If you lose access to one of these accounts, you can lose access to your live website. This isn't dramatic &mdash; it happens weekly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MODULE: BUILD ============ -->
+<section class="module" id="build" style="--accent: var(--c-build)">
+  <div class="container">
+    <span class="module-tag">Module 5</span>
+    <h2>Build the actual site</h2>
+    <p>This is the part that scares people. Don't let it. Whichever path you picked, the steps below get you to a live website you can show people.</p>
+
+    <div class="tabs">
+      <div class="tab-buttons">
+        <button class="active" data-tab="build-a">Path A: Drag &amp; Drop</button>
+        <button data-tab="build-b">Path B: AI builds it</button>
+        <button data-tab="build-c">Path C: You + AI code</button>
+      </div>
+
+      <div class="tab-content active" id="build-a">
+        <h3>Building with Carrd (recommended for Path A)</h3>
+        <ol class="steps">
+          <li>
+            <h4>Go to carrd.co and click "Start"</h4>
+            <p>You'll be asked to sign up. Free account is fine. Use the same email as before.</p>
+          </li>
+          <li>
+            <h4>Pick a template</h4>
+            <p>Browse the "Profile" or "Landing" categories. Pick one that's <strong>close to what you want</strong> — you'll change the words and colors anyway. Don't agonize. Pick in 5 minutes.</p>
+          </li>
+          <li>
+            <h4>Replace every word with YOUR words</h4>
+            <p>Click any text to edit it. Use your one-liner from Module 2 as the headline. Don't write "Welcome." Write what you DO.</p>
+          </li>
+          <li>
+            <h4>Replace the image</h4>
+            <p>Use a real photo of you or your work if possible. People trust faces. If you don't have one, use a free photo from <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a> or <a href="https://www.pexels.com" target="_blank" rel="noopener">Pexels</a> — both are 100% free for any use, no attribution required.</p>
+          </li>
+          <li>
+            <h4>Set up your ONE button</h4>
+            <p>Make sure your main button does the thing you decided in Module 2:</p>
+            <ul>
+              <li><strong>Book a call:</strong> Link the button to your Cal.com URL (cal.com/yourusername)</li>
+              <li><strong>Get their email:</strong> Carrd has a built-in form. Connect it to MailerLite in Carrd's settings.</li>
+              <li><strong>Buy now:</strong> Use Stripe Payment Links (covered in Module 9)</li>
+            </ul>
+          </li>
+          <li>
+            <h4>Hit "Publish"</h4>
+            <p>Free Carrd gives you a URL like <em>yourname.carrd.co</em>. That's your live website. Test it on your phone.</p>
+          </li>
+          <li>
+            <h4>You're done with the build. Now go to Module 6.</h4>
+          </li>
+        </ol>
+      </div>
+
+      <div class="tab-content" id="build-b">
+        <h3>Building with Claude (recommended for Path B)</h3>
+        <ol class="steps">
+          <li>
+            <h4>Open Claude.ai (free)</h4>
+            <p>Sign in with the email from Module 4.</p>
+          </li>
+          <li>
+            <h4>Start a new chat and paste this prompt template</h4>
+            <div class="card" style="background: #1A1814; color: #FBF6EC; font-family: monospace; font-size: 0.95rem;">
+            <pre style="white-space: pre-wrap; margin: 0; color: inherit;">Build me a single-page website as ONE HTML file with CSS and JavaScript all included.
+
+About my business:
+- I help: [WHO YOUR CUSTOMERS ARE]
+- I do: [WHAT YOU DO]
+- The main goal of this page is: [BOOK A CALL / GET AN EMAIL / SELL A PRODUCT]
+- My booking link is: [YOUR CAL.COM LINK or write SKIP]
+- My email signup will go to: MailerLite (give me the embed instructions)
+
+Design preferences:
+- Style: [WARM AND FRIENDLY / SLEEK AND MODERN / BOLD AND COLORFUL]
+- Colors: [PICK 2-3 COLORS YOU LIKE]
+- Include: a hero with my one-liner, 3 reasons to work with me, a section of testimonials (use placeholders I'll replace), and a clear call-to-action button at the bottom.
+
+Make it mobile-friendly. Make it load fast. No frameworks, just plain HTML/CSS/JS in one file I can save as index.html.</pre>
+            </div>
+            <p>Fill in the brackets with YOUR info. Then paste it in Claude. Hit send.</p>
+          </li>
+          <li>
+            <h4>Claude will write the code</h4>
+            <p>It'll appear in a code block or an "Artifact" panel on the right. You can preview it right there.</p>
+          </li>
+          <li>
+            <h4>Ask for changes in plain English</h4>
+            <p>Examples:</p>
+            <ul>
+              <li>"Make the headline bigger"</li>
+              <li>"Change the green to a warmer orange"</li>
+              <li>"Move the testimonials above the button"</li>
+              <li>"Add a section about my pricing"</li>
+            </ul>
+          </li>
+          <li>
+            <h4>When it's right, download the HTML file</h4>
+            <p>Click the download or copy button. Save the file as <em>index.html</em> on your desktop.</p>
+          </li>
+          <li>
+            <h4>Deploy it to Vercel (your hosting)</h4>
+            <p>Three options, easiest first:</p>
+            <ul>
+              <li><strong>Easiest:</strong> Drag-and-drop. Go to <a href="https://vercel.com/new" target="_blank" rel="noopener">vercel.com/new</a> → drag your folder containing index.html. Done.</li>
+              <li><strong>Better long-term:</strong> Upload it to GitHub first, then connect to Vercel. We walk through this in <a href="#tools">Module 15</a>.</li>
+            </ul>
+            <p>Vercel gives you a URL like <em>your-site-abc123.vercel.app</em>. That's your live site. Test on your phone.</p>
+          </li>
+        </ol>
+        <div class="plain">
+          <p>Some people use v0.dev, Bolt, or Lovable instead. Same idea: describe your site, get code, deploy. We recommend Claude first because it's the most patient with long, detailed requests and the free tier is the most usable.</p>
+        </div>
+      </div>
+
+      <div class="tab-content" id="build-c">
+        <h3>Building with Cursor (recommended for Path C)</h3>
+        <p>This path takes longer the first time but you'll actually understand what's happening.</p>
+        <ol class="steps">
+          <li>
+            <h4>Download and install Cursor</h4>
+            <p>Go to <a href="https://cursor.com" target="_blank" rel="noopener">cursor.com</a>, download for your operating system (Mac, Windows, Linux). Install it like any other app.</p>
+          </li>
+          <li>
+            <h4>Open Cursor and create a new project folder</h4>
+            <p>File → Open Folder → make a new folder on your desktop called something like <em>my-website</em>. Open it.</p>
+          </li>
+          <li>
+            <h4>Open the chat (Cmd+L on Mac, Ctrl+L on Windows)</h4>
+            <p>Type: "Create a single-page website for [my business]. Make index.html, style.css, and script.js. The goal of the page is [your goal]."</p>
+            <p>Cursor will create the files for you. You can watch it happen.</p>
+          </li>
+          <li>
+            <h4>Preview your site</h4>
+            <p>The simplest way: right-click on <em>index.html</em> in the file list, choose "Reveal in Finder/Explorer," double-click the file. It opens in your browser. That's your site, running locally.</p>
+          </li>
+          <li>
+            <h4>Edit by chatting</h4>
+            <p>Highlight any chunk of code, hit Cmd/Ctrl+K, type what you want changed. Or chat in the side panel: "make the hero section taller and add a background gradient."</p>
+          </li>
+          <li>
+            <h4>When ready, push to GitHub then deploy</h4>
+            <p>Cursor has built-in Git (the system that pushes code to GitHub). The first time is hardest. See <a href="#tools">Module 15</a> for the full walkthrough.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="win">
+      <p>Whatever path you took, at this point you should have <strong>a live website URL</strong>. Open it on your phone. Send it to a friend. Look at it on a tablet. If it's there and it loads, you've done what 80% of small business owners never finish. Now we make it actually <em>work</em>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MODULE: BUTTONS / FORMS ============ -->
+<section class="module" id="buttons" style="--accent: var(--c-connect)">
+  <div class="container">
+    <span class="module-tag">Module 6</span>
+    <h2>Make your buttons actually DO something</h2>
+    <p>This is where most people get stuck. They build a beautiful site... and then the "Contact Me" button leads to a broken form. Here's how to make every button work.</p>
+
+    <div class="plain">
+      <p><strong>Every button on your site does one of 3 things:</strong> goes to another link (like your calendar), sends you a message (a form), or takes payment. We'll handle all 3.</p>
+    </div>
+
+    <h3>Type 1: A button that LINKS to something (easiest)</h3>
+    <p>These are buttons that send people to another page or app:</p>
+    <ul>
+      <li>"Book a call" → links to your Cal.com URL</li>
+      <li>"Follow me on Instagram" → links to your Instagram</li>
+      <li>"Read the menu" → links to a PDF or page</li>
+      <li>"Buy on Etsy" → links to your Etsy shop</li>
+    </ul>
+    <p><strong>How:</strong> In your builder or code, wrap your button in an &lt;a&gt; tag (link tag). In Carrd, click the button and paste the URL. In Claude/Cursor, just tell it "make this button link to https://cal.com/me".</p>
+
+    <h3>Type 2: A button that SENDS YOU A MESSAGE (a contact form)</h3>
+    <p>This is the trickiest part for beginners. When someone fills out a form, that info has to GO SOMEWHERE. Most beginners build the form and forget to connect it. The form looks fine but nobody can actually contact them.</p>
+
+    <div class="warn">
+      <p><strong>Test your form yourself before showing the world.</strong> Submit a test message. Make sure it arrives in your email. Do it on a phone too.</p>
+    </div>
+
+    <h4>The 4 best ways to connect a contact form (free):</h4>
+    <div class="compare-grid">
+      <div class="option best">
+        <h4>Formspree</h4>
+        <p class="price free">FREE: 50 submissions/month</p>
+        <p>The simplest. Make a Formspree account, copy your form's "endpoint URL", paste it into your form. Submissions land in your email.</p>
+        <p class="pros">✔ Works with any builder or code</p>
+        <p class="pros">✔ 5 minute setup</p>
+        <a class="btn-link" href="https://formspree.io" target="_blank" rel="noopener">formspree.io →</a>
+      </div>
+      <div class="option">
+        <h4>Web3Forms</h4>
+        <p class="price free">FREE: 250 submissions/month</p>
+        <p>Most generous free tier. No account required to start. Paste the snippet into your HTML.</p>
+        <p class="pros">✔ Most free submissions</p>
+        <a class="btn-link" href="https://web3forms.com" target="_blank" rel="noopener">web3forms.com →</a>
+      </div>
+      <div class="option">
+        <h4>Netlify Forms</h4>
+        <p class="price free">FREE: 100 submissions/month (built in)</p>
+        <p>If you're hosted on Netlify, you don't need any other service. Just add <em>netlify</em> as an attribute on your form tag. Done.</p>
+        <p class="pros">✔ No extra signup if you're on Netlify</p>
+        <a class="btn-link" href="https://docs.netlify.com/forms/setup/" target="_blank" rel="noopener">Netlify Forms docs →</a>
+      </div>
+      <div class="option">
+        <h4>Tally</h4>
+        <p class="price free">FREE: unlimited forms &amp; submissions</p>
+        <p>Tally is more like Typeform. You build the form on their site, embed it on yours. Forms can look fancier than plain HTML.</p>
+        <p class="pros">✔ Unlimited free submissions</p>
+        <p class="cons">✘ Form is hosted on Tally, not your site</p>
+        <a class="btn-link" href="https://tally.so" target="_blank" rel="noopener">tally.so →</a>
+      </div>
+    </div>
+
+    <h4>Walkthrough: connecting a form with Formspree</h4>
+    <ol class="steps">
+      <li><h4>Sign up at <a href="https://formspree.io" target="_blank" rel="noopener">formspree.io</a> with your email</h4></li>
+      <li><h4>Click "New Form"</h4><p>Give it a name like "Contact Form"</p></li>
+      <li><h4>Copy your form's endpoint URL</h4><p>It looks like <em>https://formspree.io/f/abc123</em></p></li>
+      <li>
+        <h4>Paste it in your form's "action" attribute</h4>
+        <p>If you're using Claude or Cursor, tell the AI: "Change my contact form to submit to https://formspree.io/f/abc123 using POST."</p>
+        <p>In Carrd: click the form, go to "After submit", choose "Submit form data" and paste the URL.</p>
+      </li>
+      <li>
+        <h4>Submit a test message</h4>
+        <p>Fill out the form on your live site. Check your email. The first time, Formspree will send you a verification email — click the link inside.</p>
+      </li>
+      <li>
+        <h4>You're done. Every form submission now hits your inbox.</h4>
+      </li>
+    </ol>
+
+    <h3>Type 3: A button that TAKES PAYMENT</h3>
+    <p>If you're selling something, here's the easiest approach for beginners:</p>
+    <div class="compare-grid">
+      <div class="option best">
+        <h4>Stripe Payment Links</h4>
+        <p class="price free">FREE to set up. 2.9% + 30¢ per transaction.</p>
+        <p>You don't need a developer. Make a Stripe account, click "Payment Links" in the menu, set a price, get a URL. Put that URL on your button. Stripe handles checkout.</p>
+        <a class="btn-link" href="https://stripe.com/payments/payment-links" target="_blank" rel="noopener">Stripe Payment Links →</a>
+      </div>
+      <div class="option">
+        <h4>Lemon Squeezy</h4>
+        <p class="price">FREE setup. 5% + 50¢ per transaction (but handles taxes for you).</p>
+        <p>Best if you sell digital products (PDFs, courses, software). They handle sales tax/VAT for every country, which Stripe makes you do yourself.</p>
+        <a class="btn-link" href="https://lemonsqueezy.com" target="_blank" rel="noopener">lemonsqueezy.com →</a>
+      </div>
+      <div class="option">
+        <h4>PayPal Buttons</h4>
+        <p class="price">FREE. 2.9% + fixed fee per transaction.</p>
+        <p>Universally recognized. Some customers trust PayPal more than entering a credit card. Easy to add a "Pay with PayPal" button to any site.</p>
+        <a class="btn-link" href="https://www.paypal.com/us/business/buttons" target="_blank" rel="noopener">PayPal buttons →</a>
+      </div>
+    </div>
+
+    <div class="why">
+      <p><strong>Why Stripe is the standard:</strong> they have the cleanest checkout, the lowest fee structure, and they're what every "real" online business uses. But the choice depends on what you sell. Digital products with international buyers? Lemon Squeezy. Quick consultations? Stripe Payment Links. Want maximum trust? Add PayPal as a second option.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MODULE: CALENDAR ============ -->
+<section class="module" id="calendar" style="--accent: var(--c-connect)">
+  <div class="container">
+    <span class="module-tag">Module 7</span>
+    <h2>Add a booking calendar</h2>
+    <p>If your business runs on appointments, calls, or sessions — this is the most important section in the whole guide. A calendar button removes 90% of the back-and-forth.</p>
+
+    <h3>Set up Cal.com from scratch</h3>
+    <ol class="steps">
+      <li>
+        <h4>Sign up at <a href="https://cal.com/signup" target="_blank" rel="noopener">cal.com/signup</a></h4>
+        <p>Free forever for individuals. Use the same email you've been using.</p>
+      </li>
+      <li>
+        <h4>Pick your booking URL</h4>
+        <p>You'll choose a username. Your booking page will be <em>cal.com/yourusername</em>. Pick something professional. <em>cal.com/jenna-west</em> or <em>cal.com/flossys-flowers</em>.</p>
+      </li>
+      <li>
+        <h4>Connect your real calendar</h4>
+        <p>Cal.com needs to see when you're busy. Connect Google Calendar (if you use Gmail), Apple Calendar (iCloud), or Outlook. This is critical — without this, you'll get double-booked.</p>
+        <p><strong>How to connect:</strong> Settings → Conferencing &amp; Calendars → Add Calendar. Sign in with the calendar account. Approve permissions.</p>
+      </li>
+      <li>
+        <h4>Set your hours</h4>
+        <p>Tell Cal.com when you're actually available. "Monday–Friday 10 AM to 4 PM" or "Tuesday and Thursday evenings only." Whatever your real life is. Settings → Availability.</p>
+      </li>
+      <li>
+        <h4>Create your first event type</h4>
+        <p>Click "Event Types" → "+ New". Common ones:</p>
+        <ul>
+          <li><strong>Free 15-min intro call</strong> — for new leads</li>
+          <li><strong>30-min consultation</strong> — for warm leads, can be paid</li>
+          <li><strong>60-min session</strong> — your actual offering</li>
+        </ul>
+        <p>For each one: name it, set the length, pick where you meet (Zoom, Google Meet, phone, in-person). Cal.com will auto-generate meeting links.</p>
+      </li>
+      <li>
+        <h4>Take payments if you want (optional)</h4>
+        <p>In each event's settings, "Apps" → connect Stripe → set a price. Now Cal.com collects payment before they can book.</p>
+      </li>
+      <li>
+        <h4>Add the button to your website</h4>
+        <p>Two options:</p>
+        <ul>
+          <li><strong>Easiest: a link button.</strong> Just link your button to <em>https://cal.com/yourusername/event-name</em>. People click → Cal.com opens → they book. Done.</li>
+          <li><strong>Fancier: embedded pop-up.</strong> In Cal.com, go to "Event Types" → click "Embed" on the event → copy the HTML snippet → paste into your site (or paste in Claude/Cursor and say "add this to my booking button").</li>
+        </ul>
+      </li>
+      <li>
+        <h4>TEST IT.</h4>
+        <p>Book a test appointment on yourself. Use a different email. Make sure you get the confirmation. Make sure it shows on your real calendar.</p>
+      </li>
+    </ol>
+
+    <div class="why">
+      <p><strong>Why this is more important than your website's design:</strong> A beautiful site with no booking flow loses 80% of leads. An ugly site with a one-click booking button can sustain a 6-figure business. Set this up right.</p>
+    </div>
+
+    <h3>Alternatives if you don't like Cal.com</h3>
+    <div class="compare-grid">
+      <div class="option">
+        <h4>Calendly</h4>
+        <p class="price">Free: 1 event type only.</p>
+        <p>Better-known name. Worse free plan.</p>
+        <a class="btn-link" href="https://calendly.com" target="_blank" rel="noopener">calendly.com →</a>
+      </div>
+      <div class="option">
+        <h4>TidyCal</h4>
+        <p class="price">$29 ONE TIME (lifetime).</p>
+        <p>By AppSumo. Pay once, use forever. Worth it if you'll use a calendar for years.</p>
+        <a class="btn-link" href="https://tidycal.com" target="_blank" rel="noopener">tidycal.com →</a>
+      </div>
+      <div class="option">
+        <h4>SavvyCal</h4>
+        <p class="price">$12/mo.</p>
+        <p>Premium feel, best for executives. Overkill for solopreneurs.</p>
+        <a class="btn-link" href="https://savvycal.com" target="_blank" rel="noopener">savvycal.com →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MODULE: EMAIL CAPTURE ============ -->
+<section class="module" id="email" style="--accent: var(--c-connect)">
+  <div class="container">
+    <span class="module-tag">Module 8</span>
+    <h2>Capture emails (build your list)</h2>
+    <p>Not everyone is ready to book or buy on day one. Most aren't. The single most valuable thing your website can do — besides selling — is collect emails so you can follow up.</p>
+
+    <div class="plain">
+      <p>An email list is yours forever. Instagram can delete your account tomorrow. Facebook can change its algorithm. Your email list survives all of that. If you do ONE thing besides building the page, build your list.</p>
+    </div>
+
+    <h3>The trade: they give you their email, you give them something</h3>
+    <p>No one gives their email to "sign up for our newsletter" anymore. You need to offer something <strong>specific and valuable</strong>. This is called a "lead magnet." Real examples that work:</p>
+    <ul>
+      <li>A free guide ("5 Mistakes Most People Make With Their First Tax Filing")</li>
+      <li>A checklist (PDF or notion page)</li>
+      <li>A short video ("3-Minute Hip Mobility Test")</li>
+      <li>A discount code ("$25 off your first session")</li>
+      <li>A free 15-min call (use your Cal.com link)</li>
+      <li>A quiz with personalized results</li>
+    </ul>
+
+    <h3>Connect MailerLite to your form (walkthrough)</h3>
+    <ol class="steps">
+      <li>
+        <h4>In MailerLite, create a "Group"</h4>
+        <p>A group is just a folder for subscribers. Call it "Website Leads" or similar.</p>
+      </li>
+      <li>
+        <h4>Create your "automation" (the welcome email)</h4>
+        <p>Automations → New automation → Trigger: when a subscriber joins this group → Action: send an email.</p>
+        <p>This email should: (1) deliver the thing you promised, (2) introduce you, (3) tell them what to expect next.</p>
+      </li>
+      <li>
+        <h4>Get your form embed code</h4>
+        <p>MailerLite → Forms → Embedded forms → New form. Pick the group from step 1. Customize the look. Click "Save and continue" → copy the HTML embed code.</p>
+      </li>
+      <li>
+        <h4>Add the form to your website</h4>
+        <ul>
+          <li><strong>Carrd:</strong> add an "Embed" element, paste the code in.</li>
+          <li><strong>Claude/Cursor:</strong> paste the code and say "add this email signup form to my page above the footer."</li>
+          <li><strong>Webflow/Framer:</strong> they have native MailerLite integrations. Use those, they look better.</li>
+        </ul>
+      </li>
+      <li>
+        <h4>Test it</h4>
+        <p>Sign up with a different email. Make sure you receive the welcome email. Make sure you can see the subscriber in MailerLite.</p>
+      </li>
+    </ol>
+
+    <h3>MailerLite alternatives if you outgrow it</h3>
+    <div class="compare-grid">
+      <div class="option">
+        <h4>Kit (formerly ConvertKit)</h4>
+        <p class="price free">FREE up to 10,000 subscribers.</p>
+        <p>Best for creators (writers, podcasters, course makers). Most generous free tier in the industry.</p>
+        <a class="btn-link" href="https://kit.com" target="_blank" rel="noopener">kit.com →</a>
+      </div>
+      <div class="option">
+        <h4>Beehiiv</h4>
+        <p class="price free">FREE up to 2,500 subscribers.</p>
+        <p>Built for newsletter creators. Has a "discovery network" that helps you find new subscribers from other newsletters.</p>
+        <a class="btn-link" href="https://beehiiv.com" target="_blank" rel="noopener">beehiiv.com →</a>
+      </div>
+      <div class="option">
+        <h4>Brevo (was Sendinblue)</h4>
+        <p class="price free">FREE 300 emails/day, unlimited contacts.</p>
+        <p>Good if you have a big list but email infrequently. Has SMS too.</p>
+        <a class="btn-link" href="https://brevo.com" target="_blank" rel="noopener">brevo.com →</a>
+      </div>
+    </div>
+    <div class="warn">
+      <p><strong>Do not use Mailchimp.</strong> Their free plan went from generous to nearly unusable. Their UX has been declining for years. If anyone tells you to "start with Mailchimp," they haven't checked the pricing recently.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MODULE: FUNNEL ============ -->
+<section class="module" id="funnel" style="--accent: var(--c-funnel)">
+  <div class="container">
+    <span class="module-tag">Module 9</span>
+    <h2>Design a funnel that actually converts</h2>
+    <p>A funnel is just the journey from "stranger on the internet" to "paying customer." Every site has one, whether you designed it on purpose or not.</p>
+
+    <div class="plain">
+      <p><strong>Think of it like dating.</strong> You don't propose on a first date. Most strangers won't buy from you on the first visit. They need to (1) understand you, (2) trust you, (3) feel safe taking the next step. Your funnel walks them through those stages, on YOUR site, in the right order.</p>
+    </div>
+
+    <h3>The 5-section homepage that converts</h3>
+    <p>This is the ONLY layout you need for a 1-page conversion site. Sections in order, top to bottom:</p>
+
+    <ol class="steps">
+      <li>
+        <h4>HERO (top): the one-liner + ONE button</h4>
+        <p>The first thing someone sees. Headline: your one-liner from Module 2. Subhead: who it's for + the result. ONE button: your main goal (book a call, get the freebie, buy now).</p>
+        <p><strong>Bad:</strong> "Welcome to Sarah's Wellness Studio. We offer many services."<br><strong>Good:</strong> "Burnt-out moms — get strong again in 30 minutes a day, without leaving the house."</p>
+      </li>
+      <li>
+        <h4>PAIN: name their problem</h4>
+        <p>Show you understand them. 3 sentences max. "Tired of dragging yourself to a gym at 6 AM? Tired of $80 boutique classes? Tired of programs that assume you have 90 minutes and a Pilates reformer?"</p>
+        <p>When someone reads this and thinks "she gets me," they keep scrolling.</p>
+      </li>
+      <li>
+        <h4>SOLUTION: what you offer, simply</h4>
+        <p>3 reasons / 3 features / 3 outcomes. Three is the magic number — easy to scan. Each one gets a small icon, a 2-word title, and one sentence.</p>
+      </li>
+      <li>
+        <h4>PROOF: testimonials, results, credentials</h4>
+        <p>This is the trust-builder. Real names. Real photos if possible. Real results. If you have no testimonials yet, use credentials, case studies, or "as seen in" logos. If you have none of that, skip this section until you do.</p>
+      </li>
+      <li>
+        <h4>CTA: the same button from the top</h4>
+        <p>Repeat the button from the hero. Same color. Same words. People who scrolled all the way down are READY. Don't make them scroll back up.</p>
+      </li>
+    </ol>
+
+    <h3>The 3 funnel patterns that actually work</h3>
+    <div class="tabs">
+      <div class="tab-buttons">
+        <button class="active" data-tab="funnel-1">Direct Sale</button>
+        <button data-tab="funnel-2">Free Call → Sale</button>
+        <button data-tab="funnel-3">Email First → Nurture → Sale</button>
+      </div>
+      <div class="tab-content active" id="funnel-1">
+        <h4>Direct sale (best for low-priced or familiar products)</h4>
+        <p>Website → buy button → checkout → done.</p>
+        <p><strong>Use this if:</strong> you're selling a product under ~$50, OR something people already understand (a printable, a candle, a small service).</p>
+        <p><strong>Tools:</strong> Stripe Payment Links (Module 6).</p>
+      </div>
+      <div class="tab-content" id="funnel-2">
+        <h4>Free call → sale (best for higher-priced services)</h4>
+        <p>Website → "Book free 15-min call" → Cal.com → call → you close the sale on the call.</p>
+        <p><strong>Use this if:</strong> you're a coach, consultant, contractor, healer, or any service over ~$200.</p>
+        <p><strong>Tools:</strong> Cal.com (Module 7). On the call, have a clear next step ready ("Want to start? I'll send you the booking link right after this.").</p>
+      </div>
+      <div class="tab-content" id="funnel-3">
+        <h4>Email first → nurture → sale (best for not-ready-yet visitors)</h4>
+        <p>Website → "Get free guide" → email captured → MailerLite sends 5-7 emails over 2 weeks → email #6 makes the offer.</p>
+        <p><strong>Use this if:</strong> your audience is researching, your offer is complex, or you're building a longer-term audience.</p>
+        <p><strong>Tools:</strong> MailerLite (Module 8) + your lead magnet PDF/guide.</p>
+      </div>
+    </div>
+
+    <div class="why">
+      <p>Pick ONE funnel pattern for your first site. You can add others later. Beginners ALWAYS try to do all 3 at once. It splits attention and converts no one. Pick one.</p>
+    </div>
+
+    <h3>The 7 conversion rules (steal these)</h3>
+    <ol>
+      <li><strong>One main button per screen.</strong> The eye needs to know where to go.</li>
+      <li><strong>Show your face.</strong> A photo of you increases trust 50%+. Doesn't need to be professional. Real beats polished.</li>
+      <li><strong>Use "you" 3x more than "I" or "we".</strong> Read your homepage. Count.</li>
+      <li><strong>Tell them what happens AFTER they click.</strong> "Get instant access" not just "Submit." "Book your call (takes 30 seconds)" not just "Book."</li>
+      <li><strong>Address the #1 objection right next to the button.</strong> If price is the worry: "Free, no credit card needed." If time: "Less than 2 minutes." If commitment: "Cancel anytime."</li>
+      <li><strong>Keep paragraphs short.</strong> 1–3 sentences. Especially on mobile. Walls of text get scrolled past.</li>
+      <li><strong>Load fast.</strong> If your site takes more than 3 seconds, half your traffic leaves before seeing it. Compress images. Don't add 17 fonts.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ MODULE: DOMAIN ============ -->
+<section class="module" id="domain" style="--accent: var(--c-domain)">
+  <div class="container">
+    <span class="module-tag">Module 10</span>
+    <h2>Get a domain name</h2>
+    <p>Your domain is your website's address. Like <em>yourname.com</em>. You can run your business off a free <em>yoursite.vercel.app</em> URL forever — but a custom domain costs ~$10/year and makes you look real.</p>
+
+    <h3>Where to buy a domain (and where NOT to)</h3>
+    <div class="compare-grid">
+      <div class="option best">
+        <h4>Cloudflare Registrar</h4>
+        <p class="price">~$9–11/year for .com — at cost, no markup</p>
+        <p>Cloudflare sells domains for what they pay. No upsells. No surprise renewal fees. You need a free Cloudflare account first.</p>
+        <p class="pros">✔ Cheapest legitimate option</p>
+        <p class="pros">✔ No upsells ever</p>
+        <p class="cons">✘ You can't buy domains here yet without an existing account (free)</p>
+        <a class="btn-link" href="https://www.cloudflare.com/products/registrar/" target="_blank" rel="noopener">cloudflare.com/registrar →</a>
+      </div>
+      <div class="option">
+        <h4>Porkbun</h4>
+        <p class="price">~$10–11/year for .com</p>
+        <p>Indie favorite. Honest pricing. Friendly support. Many freebies (free email forwarding, free SSL, etc.).</p>
+        <p class="pros">✔ Easiest sign-up</p>
+        <p class="pros">✔ Honest renewal pricing</p>
+        <a class="btn-link" href="https://porkbun.com" target="_blank" rel="noopener">porkbun.com →</a>
+      </div>
+      <div class="option">
+        <h4>Namecheap</h4>
+        <p class="price">~$11–13/year for .com (first year ~$6)</p>
+        <p>Big, reliable, decent prices. Renewal jumps after year 1 but still reasonable.</p>
+        <a class="btn-link" href="https://www.namecheap.com" target="_blank" rel="noopener">namecheap.com →</a>
+      </div>
+    </div>
+
+    <div class="warn">
+      <p><strong>Avoid GoDaddy.</strong> Their first-year prices look cheap. The renewal prices triple. They aggressively upsell everything (most of which you don't need). Their support tries to sell you instead of helping. Many web pros consider them the worst major registrar.</p>
+      <p><strong>Avoid bundles from Squarespace/Wix.</strong> If you ever leave their platform, you might have to fight to transfer your own domain. Always buy the domain SEPARATELY from your hosting.</p>
+    </div>
+
+    <h3>How to pick a good domain name</h3>
+    <ul>
+      <li><strong>Stick with .com.</strong> Yes, .io and .co exist. .com is still 10x more memorable. Old people will only remember .com.</li>
+      <li><strong>Short is better.</strong> Under 15 characters if you can. Easy to spell, easy to say.</li>
+      <li><strong>Avoid numbers and hyphens.</strong> They confuse people. "yoursite-online.com" is forgettable.</li>
+      <li><strong>Test it out loud.</strong> If you have to spell it on the phone, it's wrong.</li>
+      <li><strong>If your name is taken, try:</strong> adding your craft (yourname-design.com), your city (jenna-tn.com), or use your business name instead of your personal name.</li>
+    </ul>
+
+    <h3>Walkthrough: buy a domain on Porkbun (easiest)</h3>
+    <ol class="steps">
+      <li><h4>Go to <a href="https://porkbun.com" target="_blank" rel="noopener">porkbun.com</a></h4></li>
+      <li><h4>Search the domain you want</h4><p>If it's taken, try variants. Don't pay $1,000 to buy a "premium" domain — pick something else.</p></li>
+      <li><h4>Add to cart. SKIP the upsells.</h4><p>You do NOT need: WhoIs privacy (it's already free), web hosting (you have Vercel/Netlify), email hosting (free options later), SSL certificate (your host gives this free), site builder (you already have one).</p></li>
+      <li><h4>Pay. Save your login.</h4></li>
+      <li><h4>Don't connect anything yet. Move to Module 11.</h4></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ MODULE: CONNECT DOMAIN ============ -->
+<section class="module" id="connect-domain" style="--accent: var(--c-domain)">
+  <div class="container">
+    <span class="module-tag">Module 11</span>
+    <h2>Connect your domain to your site</h2>
+    <p>This is the most "technical" step in the whole guide. It involves something called <strong>DNS</strong>. We're going to explain it so it makes sense.</p>
+
+    <div class="plain">
+      <p><strong>DNS = the internet's phone book.</strong> When someone types "yoursite.com," DNS looks up what computer (server) actually has the website files. You need to tell DNS: "yoursite.com lives at Vercel/Netlify." That's it. The actual instructions are a one-time copy-paste job.</p>
+    </div>
+
+    <h3>Connecting to Vercel (works for any domain registrar)</h3>
+    <ol class="steps">
+      <li>
+        <h4>In Vercel, go to your project → Settings → Domains</h4>
+        <p>Click "Add" and type your domain (e.g., yourbusiness.com). Hit "Add."</p>
+      </li>
+      <li>
+        <h4>Vercel will show you 2–4 DNS records to add</h4>
+        <p>It looks like:</p>
+        <pre style="background: #1A1814; color: #FBF6EC; padding: 14px; border-radius: 8px; overflow-x: auto; font-size: 0.9rem;">Type: A      Name: @       Value: 76.76.21.21
+Type: CNAME  Name: www     Value: cname.vercel-dns.com</pre>
+        <p>Don't panic. You're just copying these values into a different website.</p>
+      </li>
+      <li>
+        <h4>Open your domain registrar in a NEW tab</h4>
+        <p>(Porkbun, Cloudflare, Namecheap — whichever you bought from.)</p>
+      </li>
+      <li>
+        <h4>Find "DNS" settings for your domain</h4>
+        <ul>
+          <li><strong>Porkbun:</strong> click your domain → "DNS Records" tab</li>
+          <li><strong>Cloudflare:</strong> click your domain → "DNS" → "Records"</li>
+          <li><strong>Namecheap:</strong> click "Manage" next to your domain → "Advanced DNS" tab</li>
+        </ul>
+      </li>
+      <li>
+        <h4>Add the records Vercel gave you</h4>
+        <p>For each one Vercel listed: click "+ Add record" → pick the Type (A or CNAME) → put the Name → put the Value → Save.</p>
+        <p><strong>Critical:</strong> if your registrar has any default records pointing somewhere else, DELETE them. You only want the Vercel ones.</p>
+      </li>
+      <li>
+        <h4>Wait 5 minutes to 24 hours</h4>
+        <p>DNS changes can be instant or can take a day. Most are under 1 hour. Vercel will email you when it's verified. Don't panic if it takes a while.</p>
+      </li>
+      <li>
+        <h4>Test by typing your domain in a browser</h4>
+        <p>If your site shows up, you're done. If you see a "DNS_PROBE" error, wait longer. If you see someone else's site, you missed deleting an old record.</p>
+      </li>
+    </ol>
+
+    <div class="why">
+      <p><strong>What about SSL/HTTPS?</strong> The little padlock next to your URL? Vercel/Netlify give you that automatically. You don't need to buy an SSL certificate. Anyone trying to sell you one for $50/year is scamming you.</p>
+    </div>
+
+    <h3>If your builder doesn't use Vercel/Netlify</h3>
+    <p>The process is the same. The host gives you DNS records. You paste them in your registrar. Specifically:</p>
+    <ul>
+      <li><strong>Carrd:</strong> Pro plan ($19/year) lets you add a custom domain. Settings show you the records to add.</li>
+      <li><strong>Framer:</strong> Settings → Domains → Add. Similar pattern.</li>
+      <li><strong>Webflow:</strong> Project settings → Hosting → Add Custom Domain. Same pattern.</li>
+      <li><strong>GitHub Pages:</strong> Settings → Pages → Custom domain. Add a CNAME file with your domain.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ MODULE: MOBILE ============ -->
+<section class="module" id="mobile" style="--accent: var(--c-launch)">
+  <div class="container">
+    <span class="module-tag">Module 12</span>
+    <h2>Make it mobile-friendly</h2>
+    <p>Over 60% of your visitors will be on a phone. If your site is hard to use on a phone, you lose them. Period.</p>
+
+    <div class="plain">
+      <p>"Mobile-friendly" doesn't mean "has a mobile version." It means the SAME page reshapes itself to fit any screen — phone, tablet, laptop, desktop. The fancy term for this is "responsive design." Every modern builder and AI tool does this by default. You just need to TEST it.</p>
+    </div>
+
+    <h3>The 5-minute mobile test</h3>
+    <ol class="steps">
+      <li>
+        <h4>Open your live site on your actual phone</h4>
+        <p>Not a simulator. Not a "preview" in Chrome. Your real phone. iPhone, Android, doesn't matter — just a real device.</p>
+      </li>
+      <li>
+        <h4>Try every button</h4>
+        <p>Can you tap them with a thumb without zooming? Are any too small or too close to other buttons?</p>
+      </li>
+      <li>
+        <h4>Read every paragraph</h4>
+        <p>Is the text legible without zooming? Is it longer than 65 characters per line? (Long lines tire eyes on phones.)</p>
+      </li>
+      <li>
+        <h4>Fill out every form</h4>
+        <p>Does the keyboard pop up correctly? Does the form actually submit? Did you receive the test email?</p>
+      </li>
+      <li>
+        <h4>Turn the phone sideways</h4>
+        <p>Does anything break? Does the layout still make sense?</p>
+      </li>
+      <li>
+        <h4>Time how long the page takes to load</h4>
+        <p>Should be under 3 seconds. If longer: see "speed up" below.</p>
+      </li>
+    </ol>
+
+    <h3>Free mobile testing tools</h3>
+    <ul>
+      <li><a href="https://pagespeed.web.dev" target="_blank" rel="noopener">PageSpeed Insights</a> — Google's free tool. Type your URL, get a mobile score 0–100. Anything 70+ is fine. 90+ is great.</li>
+      <li><a href="https://www.responsivetestingtool.com" target="_blank" rel="noopener">Responsive Testing Tool</a> — see your site on every screen size at once.</li>
+      <li>Chrome DevTools — right-click → Inspect → click the phone icon at top. Free, built into Chrome.</li>
+    </ul>
+
+    <h3>Speed up a slow site (in priority order)</h3>
+    <ol>
+      <li>
+        <strong>Compress your images.</strong> The #1 reason sites are slow. Use <a href="https://squoosh.app" target="_blank" rel="noopener">Squoosh</a> (free, by Google) or <a href="https://tinypng.com" target="_blank" rel="noopener">TinyPNG</a>. Drag your image in, download the smaller version. A 4MB photo can become 200KB with no visible quality loss.
+      </li>
+      <li>
+        <strong>Use the right image format.</strong> Photos → JPG (or modern WebP). Logos and graphics with sharp lines → PNG or SVG. Animated → GIF or video.
+      </li>
+      <li>
+        <strong>Don't load 5 different fonts.</strong> Pick 2 maximum. One for headlines, one for body text.
+      </li>
+      <li>
+        <strong>Remove unused trackers and analytics.</strong> Each one adds load time. You don't need 8 tracking pixels on day 1.
+      </li>
+      <li>
+        <strong>If still slow, ask your AI:</strong> "Audit this HTML for performance issues" or "What can I do to make this page load faster on mobile?" with your code pasted in.
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ MODULE: GET FOUND ============ -->
+<section class="module" id="found" style="--accent: var(--c-grow)">
+  <div class="container">
+    <span class="module-tag">Module 13</span>
+    <h2>Get found (Google AND AI search)</h2>
+    <p>A live website nobody finds is a tree falling in an empty forest. There are two main ways people will discover you in 2026: <strong>Google search</strong> and <strong>AI chatbots</strong> (ChatGPT, Claude, Perplexity, Gemini). The good news: optimizing for one helps the other.</p>
+
+    <h3>SEO = Search Engine Optimization (for Google)</h3>
+    <h3>AEO = Answer Engine Optimization (for AI)</h3>
+
+    <div class="plain">
+      <p>Google still drives most traffic, but more and more people now ask ChatGPT or Claude for recommendations. To show up in those answers, your site needs to be readable by the AI <strong>and</strong> say things in a way it can quote you.</p>
+    </div>
+
+    <h3>The 10 things that actually help (free, beginner-doable)</h3>
+
+    <ol class="steps">
+      <li>
+        <h4>Write a clear page title and description</h4>
+        <p>The title tag is what shows up in Google's blue link. Make it specific to YOU and what you do. Bad: "Home." Good: "Erwin TN Bookkeeper for Small Businesses — Free Consultation"</p>
+      </li>
+      <li>
+        <h4>Use real headings (H1, H2, H3)</h4>
+        <p>Don't just make text bigger. Use heading tags. Both Google and AI use them to understand structure. One H1 per page. Multiple H2s for sections. H3s for sub-sections.</p>
+      </li>
+      <li>
+        <h4>Answer the questions your customers actually ask</h4>
+        <p>Add a FAQ section with real questions in plain language. ("How much does it cost?" "Do you work with people outside Tennessee?" "What if I don't have a business yet?") AI assistants pull answers directly from FAQ sections.</p>
+      </li>
+      <li>
+        <h4>Include your location if it matters</h4>
+        <p>Service businesses: put your city/region in the H1, the title, and a few places on the page. "Asheville therapist" beats "Therapist" for local searches.</p>
+      </li>
+      <li>
+        <h4>Get backlinks (other sites linking to yours)</h4>
+        <p>The single biggest Google ranking factor. Easy ways: get listed on Google Business Profile (free, mandatory for local), get on local directories, ask people you've helped to mention you, write a guest post somewhere.</p>
+      </li>
+      <li>
+        <h4>Create a Google Business Profile</h4>
+        <p><a href="https://www.google.com/business/" target="_blank" rel="noopener">google.com/business</a> — free. This is what creates that map listing on the right of Google when someone searches you. If you serve local customers, this is more important than your website.</p>
+      </li>
+      <li>
+        <h4>Add structured data (schema)</h4>
+        <p>This is invisible code that tells Google "this is a business, this is a price, this is a review." Ask Claude: "Add Local Business schema to my homepage with [your details]." Paste the result. Done in 30 seconds.</p>
+      </li>
+      <li>
+        <h4>Write content that AI can quote</h4>
+        <p>AI assistants like clear, definitive statements. "The average tax bookkeeping for a freelancer costs $300–$600 per year" is quotable. "It depends on a lot of factors" is not.</p>
+      </li>
+      <li>
+        <h4>Submit your sitemap to Google</h4>
+        <p>Once your domain is live, go to <a href="https://search.google.com/search-console" target="_blank" rel="noopener">Google Search Console</a> → add your site → submit your sitemap (Vercel/Netlify usually generate one at /sitemap.xml automatically).</p>
+      </li>
+      <li>
+        <h4>Make sure your site is crawlable by AI</h4>
+        <p>By default it usually is. Don't add a "robots.txt" that blocks AI crawlers like GPTBot, Claude-Web, or PerplexityBot unless you want to be invisible to them.</p>
+      </li>
+    </ol>
+
+    <div class="why">
+      <p><strong>The honest truth about SEO:</strong> ranking on Google takes months. Sometimes a year. Don't obsess over it on day one. Focus on getting your first 10 customers through any means (social, word of mouth, in person). Set up the basics above and let SEO build over time.</p>
+    </div>
+
+    <h3>What NOT to waste money on (yet)</h3>
+    <ul>
+      <li>SEO agencies charging $1,000+/month — completely unnecessary at your stage</li>
+      <li>"SEO tools" like Ahrefs, SEMrush — overkill for a brand new site</li>
+      <li>Paid backlinks — Google will penalize you</li>
+      <li>"Submit your site to 500 directories" services — 99% are spam</li>
+      <li>Most paid keyword research tools — free Google Search Console gives you 90% of what you need</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ MODULE: TOOLS DOWNLOAD ============ -->
+<section class="module" id="tools" style="--accent: var(--c-grow)">
+  <div class="container">
+    <span class="module-tag">Module 14</span>
+    <h2>Download the tools you need (with walkthroughs)</h2>
+    <p>If you're on Path B or C, you might need to install some apps. This is the part where most beginners get spooked. We'll go slowly.</p>
+
+    <div class="tabs">
+      <div class="tab-buttons">
+        <button class="active" data-tab="t-cursor">Cursor</button>
+        <button data-tab="t-vscode">VS Code</button>
+        <button data-tab="t-claudecode">Claude Code</button>
+        <button data-tab="t-git">Git + GitHub Desktop</button>
+      </div>
+
+      <div class="tab-content active" id="t-cursor">
+        <h3>Installing Cursor (AI code editor)</h3>
+        <ol class="steps">
+          <li><h4>Go to <a href="https://cursor.com" target="_blank" rel="noopener">cursor.com</a></h4></li>
+          <li>
+            <h4>Click "Download"</h4>
+            <p>It auto-detects your operating system (Mac, Windows, or Linux).</p>
+          </li>
+          <li>
+            <h4>Install it</h4>
+            <ul>
+              <li><strong>Mac:</strong> Open the .dmg file → drag Cursor to Applications folder. First open: right-click → Open (this bypasses the "unidentified developer" warning the first time only).</li>
+              <li><strong>Windows:</strong> Run the .exe installer. Click through. Done.</li>
+              <li><strong>Linux:</strong> Open the .AppImage file. May need to make it executable: <code>chmod +x cursor.AppImage</code></li>
+            </ul>
+          </li>
+          <li>
+            <h4>Open Cursor, sign up for free</h4>
+            <p>Use the same email you've been using. Skip "import settings from VS Code" if you've never used VS Code.</p>
+          </li>
+          <li>
+            <h4>Try the AI chat</h4>
+            <p>Press <strong>Cmd+L (Mac)</strong> or <strong>Ctrl+L (Windows/Linux)</strong>. Type "say hello" and hit enter. If Claude or GPT responds, you're set.</p>
+          </li>
+          <li>
+            <h4>Open a folder to start a project</h4>
+            <p>File → Open Folder → make a new folder on your desktop. Now you have a project.</p>
+          </li>
+        </ol>
+        <div class="plain">
+          <p><strong>Free Cursor is generous</strong> — you get a few hundred AI requests per month. For your first site, that's plenty. Don't pay for Pro until you actually hit the limit.</p>
+        </div>
+      </div>
+
+      <div class="tab-content" id="t-vscode">
+        <h3>Installing VS Code (classic free code editor)</h3>
+        <ol class="steps">
+          <li><h4>Go to <a href="https://code.visualstudio.com" target="_blank" rel="noopener">code.visualstudio.com</a></h4></li>
+          <li><h4>Click "Download"</h4><p>It detects your OS.</p></li>
+          <li>
+            <h4>Install it</h4>
+            <ul>
+              <li><strong>Mac:</strong> Open the .zip → drag VS Code to Applications.</li>
+              <li><strong>Windows:</strong> Run the installer. Check "Add to PATH" if asked.</li>
+            </ul>
+          </li>
+          <li>
+            <h4>Add the Live Server extension</h4>
+            <p>Open VS Code → click the Extensions icon (4 squares, left sidebar) → search "Live Server" by Ritwick Dey → Install. Now you can right-click any .html file → "Open with Live Server" and see it in your browser.</p>
+          </li>
+          <li>
+            <h4>Add AI (optional)</h4>
+            <p>For free AI: install <strong>Continue</strong> or <strong>Codeium</strong> from the Extensions tab. Both work without paying. For paid: GitHub Copilot is $10/month (free for verified students).</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="tab-content" id="t-claudecode">
+        <h3>Installing Claude Code (advanced — terminal-based)</h3>
+        <p>Claude Code runs in your terminal (the black-screen-with-text app). It's more powerful but less beginner-friendly. Start with Cursor if you've never coded before.</p>
+        <ol class="steps">
+          <li>
+            <h4>You need Node.js installed first</h4>
+            <p>Go to <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a> → download the LTS version → install with defaults.</p>
+          </li>
+          <li>
+            <h4>Open your terminal</h4>
+            <ul>
+              <li><strong>Mac:</strong> Cmd+Space → type "Terminal" → enter</li>
+              <li><strong>Windows:</strong> press Windows key → type "PowerShell" → enter</li>
+              <li><strong>Linux:</strong> Ctrl+Alt+T</li>
+            </ul>
+          </li>
+          <li>
+            <h4>Install Claude Code</h4>
+            <p>Paste this command and hit enter:</p>
+            <pre style="background: #1A1814; color: #FBF6EC; padding: 14px; border-radius: 8px;">npm install -g @anthropic-ai/claude-code</pre>
+          </li>
+          <li>
+            <h4>Run Claude Code</h4>
+            <p>In your terminal, navigate to your project folder (<code>cd ~/Desktop/my-website</code>), then type <code>claude</code> and hit enter. Sign in when prompted.</p>
+          </li>
+          <li>
+            <h4>Ask it anything</h4>
+            <p>"Build me an index.html for a flower farm in East Tennessee." Watch it work. It can read files, write files, run commands, and fix bugs.</p>
+          </li>
+        </ol>
+        <p>For the official docs and the latest install instructions, check <a href="https://docs.claude.com/en/docs/claude-code/overview" target="_blank" rel="noopener">the Claude Code docs</a>.</p>
+      </div>
+
+      <div class="tab-content" id="t-git">
+        <h3>Git + GitHub Desktop (so your code lives on GitHub)</h3>
+        <p>"Git" is the version-control system. "GitHub" is the website that hosts your Git stuff. To push your local code to GitHub, the easiest way is GitHub Desktop (no terminal needed).</p>
+        <ol class="steps">
+          <li>
+            <h4>Download GitHub Desktop</h4>
+            <p>Go to <a href="https://desktop.github.com" target="_blank" rel="noopener">desktop.github.com</a> → download → install.</p>
+          </li>
+          <li>
+            <h4>Sign in with your GitHub account</h4>
+            <p>The same one from Module 4.</p>
+          </li>
+          <li>
+            <h4>Click "Add an Existing Repository" → pick your project folder</h4>
+            <p>If it says "this isn't a Git repository" → "create a repository here" → fill in the name and click Create.</p>
+          </li>
+          <li>
+            <h4>Commit your changes</h4>
+            <p>Whenever you make changes, GitHub Desktop shows them. Write a quick note ("first version", "added contact form"), click "Commit to main".</p>
+          </li>
+          <li>
+            <h4>Publish to GitHub</h4>
+            <p>Click "Publish repository". Pick public or private. Click Publish. Your code is now backed up online.</p>
+          </li>
+          <li>
+            <h4>Connect to Vercel</h4>
+            <p>Go to Vercel → "Add New Project" → pick the GitHub repo → click Deploy. From now on, every time you commit + push, Vercel auto-deploys.</p>
+          </li>
+        </ol>
+        <div class="why">
+          <p><strong>Why this matters:</strong> once this is set up, your workflow is: change a file → commit in GitHub Desktop → push → Vercel rebuilds your live site in 30 seconds. No more drag-and-drop uploading.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3>Railway (skip for now)</h3>
+    <p>Railway is a hosting service like Vercel/Netlify, but it's better for sites with a <strong>real backend</strong> (databases, servers, complex apps). For a single-page marketing site or basic business site, you don't need Railway. The free tier expires after $5 of usage, so it's not actually "free" long-term.</p>
+    <p>If you're building something like an app with user accounts, a database, or constantly-running code, then look at Railway. Otherwise: Vercel or Netlify.</p>
+    <a class="btn-link" style="background: var(--ink); color: var(--bg); display: inline-block; padding: 10px 18px; border: 3px solid var(--ink); border-radius: 8px; text-decoration: none; font-weight: 700;" href="https://railway.app" target="_blank" rel="noopener">railway.app →</a>
+  </div>
+</section>
+
+<!-- ============ MODULE: PLATFORMS ============ -->
+<section class="module" id="platforms" style="--accent: var(--c-grow)">
+  <div class="container">
+    <span class="module-tag">Module 15</span>
+    <h2>Mac vs PC vs Phone — what changes?</h2>
+    <p>Almost nothing in this guide is different by operating system. Websites are universal. But there are a few small things:</p>
+
+    <div class="compare-grid">
+      <div class="option">
+        <h4>🍎 Mac (Apple)</h4>
+        <ul>
+          <li><strong>Shortcuts use Cmd:</strong> Cmd+C, Cmd+V, Cmd+S, Cmd+L (chat in Cursor)</li>
+          <li><strong>Terminal:</strong> built-in. Cmd+Space → "Terminal"</li>
+          <li><strong>Files:</strong> "Finder" is your file explorer</li>
+          <li><strong>Right-click:</strong> two-finger tap on the trackpad, OR Control+click</li>
+          <li><strong>Best for:</strong> design-heavy work, video editing, dev work</li>
+        </ul>
+      </div>
+      <div class="option">
+        <h4>🪟 Windows (PC)</h4>
+        <ul>
+          <li><strong>Shortcuts use Ctrl:</strong> Ctrl+C, Ctrl+V, Ctrl+S, Ctrl+L (chat in Cursor)</li>
+          <li><strong>Terminal:</strong> "PowerShell" or "Windows Terminal" (search in Start menu)</li>
+          <li><strong>Files:</strong> "File Explorer"</li>
+          <li><strong>Right-click:</strong> works as expected</li>
+          <li><strong>Best for:</strong> everything Mac does, plus more flexibility on hardware/budget</li>
+        </ul>
+      </div>
+      <div class="option">
+        <h4>🤖 Android phone</h4>
+        <ul>
+          <li>You can do MOST of this on a phone if you have to</li>
+          <li><strong>Carrd:</strong> works in mobile browser</li>
+          <li><strong>Claude.ai:</strong> has a mobile app</li>
+          <li><strong>Cursor/VS Code:</strong> not on mobile</li>
+          <li><strong>GitHub Mobile:</strong> for checking your code, not editing</li>
+          <li>If phone is all you have: use Path A (Carrd) or Path B (Claude → Vercel drag-and-drop on a friend's laptop just for deploy)</li>
+        </ul>
+      </div>
+      <div class="option">
+        <h4>📱 iPhone (iOS)</h4>
+        <ul>
+          <li>Same situation as Android — most builders work in mobile Safari</li>
+          <li><strong>Claude</strong>, <strong>Cursor</strong>, <strong>v0</strong>, <strong>Bolt</strong> all have working web versions on iPhone</li>
+          <li>You CAN technically build a whole site on iPhone using Claude.ai + a service like <a href="https://www.netlify.com/drop/" target="_blank" rel="noopener">Netlify Drop</a> (drag a folder, get a live site)</li>
+          <li>Get to a laptop for the domain/DNS step. It's not impossible on phone but it's frustrating.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="plain">
+      <p><strong>Bottom line:</strong> any computer made in the last 7 years can build this. A $200 used laptop on Facebook Marketplace works. A library computer works. A Chromebook works (for the AI builder path). You don't need a $2,000 MacBook to start.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MODULE: GLOSSARY ============ -->
+<section class="module" id="glossary" style="--accent: var(--c-help)">
+  <div class="container">
+    <span class="module-tag">Reference</span>
+    <h2>Glossary — every techy word, explained</h2>
+    <p>If something on this page sounds like a foreign language, find it here.</p>
+
+    <div class="glossary-grid">
+      <div class="glossary-card">
+        <h4>Frontend</h4>
+        <p>The part of a website you can SEE. The pictures, words, buttons, colors. What the visitor experiences.</p>
+      </div>
+      <div class="glossary-card">
+        <h4>Backend</h4>
+        <p>The invisible machinery. Where form submissions go. Where databases live. The "behind the scenes" of a site.</p>
+      </div>
+      <div class="glossary-card">
+        <h4>HTML</h4>
+        <p>The skeleton of a webpage. Headings, paragraphs, buttons — all written as HTML tags like &lt;h1&gt; or &lt;button&gt;.</p>
+      </div>
+      <div class="glossary-card">
+        <h4>CSS</h4>
+        <p>The styling. Colors, fonts, sizes, layout. CSS dresses HTML up.</p>
+      </div>
+      <div class="glossary-card">
+        <h4>JavaScript (JS)</h4>
+        <p>What makes a page DO things. Click a button → something happens. Form validation. Animations. Anything interactive.</p>
+      </div>
+      <div class="glossary-card">
+        <h4>Hosting</h4>
+        <p>The computer your website lives on, that serves your page to anyone who visits. Vercel, Netlify, Cloudflare Pages = hosting services.</p>
+      </div>
+      <div class="glossary-card">
+        <h4>Domain</h4>
+        <p>The address you type to find a website. yourbusiness.com. You "rent" it for about $10/year from a registrar (Porkbun, Cloudflare).</p>
+      </div>
+      <div class="glossary-card">
+        <h4>DNS</h4>
+        <p>"Domain Name System." The internet's phone book. Tells computers where a domain actually lives.</p>
+      </div>
+      <div class="glossary-card">
+        <h4>SSL / HTTPS</h4>
+        <p>The little padlock next to a URL. Means the connection is encrypted (safe). Free and automatic from any modern host.</p>
+      </div>
+      <div class="glossary-card">
+        <h4>Git</h4>
+        <p>A system for saving every version of your code. Like time travel for files. You "commit" changes to save snapshots.</p>
+      </div>
+      <div class="glossary-card">
+        <h4>GitHub</h4>
+        <p>A website that hosts your Git stuff in the cloud. Free. Owned by Microsoft.</p>
+      </div>
+      <div class="glossary-card">
+        <h4>Repository (Repo)</h4>
+        <p>A single project folder on GitHub. Has all your code + every version of it.</p>
+      </div>
+      <div class="glossary-card">
+        <h4>Deploy</h4>
+        <p>The act of pushing your code so it shows up on the live internet. "I deployed the new version" = "the live site is updated."</p>
+      </div>
+      <div class="glossary-card">
+        <h4>Terminal / Command Line</h4>
+        <p>The black-screen-with-text app. Where you type commands instead of clicking. Looks scary, isn't.</p>
+      </div>
+      <div class="glossary-card">
+        <h4>API</h4>
+        <p>"Application Programming Interface." A way two pieces of software talk to each other. "Use Claude's API" = "let your app send messages to Claude and get answers back."</p>
+      </div>
+      <div class="glossary-card">
+        <h4>CMS</h4>
+        <p>"Content Management System." Lets you edit your site's content without coding. WordPress, Webflow's editor, etc.</p>
+      </div>
+      <div class="glossary-card">
+        <h4>Framework</h4>
+        <p>A pre-built foundation of code. React, Next.js, Vue. You don't NEED one to build a website. Single HTML files work fine.</p>
+      </div>
+      <div class="glossary-card">
+        <h4>SEO</h4>
+        <p>"Search Engine Optimization." Doing things to your site so Google ranks it higher.</p>
+      </div>
+      <div class="glossary-card">
+        <h4>AEO</h4>
+        <p>"Answer Engine Optimization." Making sure AI chatbots (ChatGPT, Claude, Perplexity) cite YOU when answering questions.</p>
+      </div>
+      <div class="glossary-card">
+        <h4>Lead Magnet</h4>
+        <p>A free thing you give in exchange for an email. A guide, a checklist, a quiz, a discount code.</p>
+      </div>
+      <div class="glossary-card">
+        <h4>Funnel</h4>
+        <p>The journey from "stranger sees your site" to "stranger becomes a customer." Has a beginning, middle, and end.</p>
+      </div>
+      <div class="glossary-card">
+        <h4>CTA</h4>
+        <p>"Call to Action." The button or text that asks the visitor to do something. "Book now," "Get the guide," "Buy."</p>
+      </div>
+      <div class="glossary-card">
+        <h4>Responsive Design</h4>
+        <p>A site that reshapes for any screen size — phone, tablet, laptop, desktop. The same page, smart layout.</p>
+      </div>
+      <div class="glossary-card">
+        <h4>Schema / Structured Data</h4>
+        <p>Invisible code that tells search engines what a page is about. "This is a business. This is its address. This is a review."</p>
+      </div>
+      <div class="glossary-card">
+        <h4>Subdomain</h4>
+        <p>A piece in front of the main domain. blog.yourbusiness.com is a subdomain of yourbusiness.com. Free to create.</p>
+      </div>
+      <div class="glossary-card">
+        <h4>Server</h4>
+        <p>A computer somewhere in the world that runs 24/7 and serves your website to visitors. You're renting one when you use Vercel/Netlify.</p>
+      </div>
+      <div class="glossary-card">
+        <h4>Static Site</h4>
+        <p>A site where the pages are pre-built and don't change for each visitor. Fast, cheap to host. What most small business sites should be.</p>
+      </div>
+      <div class="glossary-card">
+        <h4>Dynamic Site</h4>
+        <p>A site where pages change depending on the user, time, database content. Slower, more expensive. Needed for apps with logins.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MODULE: STUCK ============ -->
+<section class="module" id="stuck" style="--accent: var(--c-help)">
+  <div class="container">
+    <span class="module-tag">When things break</span>
+    <h2>If you get stuck</h2>
+
+    <h3>The 4-step unstucking method (in order)</h3>
+    <ol class="steps">
+      <li>
+        <h4>Read the actual error message</h4>
+        <p>Computers tell you what's wrong if you read what's on the screen. Most beginners panic and don't read. Read it. Copy the exact error text.</p>
+      </li>
+      <li>
+        <h4>Paste the error into Claude/ChatGPT</h4>
+        <p>"I'm getting this error: [paste]. I'm trying to [what you're doing]. Here's my code: [paste]. Help me debug."</p>
+        <p>Be specific. The more context, the better the answer.</p>
+      </li>
+      <li>
+        <h4>Google the exact error</h4>
+        <p>Someone else has had this exact problem. Stack Overflow, Reddit, GitHub issues — paste it in. Take the top 2–3 results, read them.</p>
+      </li>
+      <li>
+        <h4>Try one fix at a time</h4>
+        <p>Don't change 5 things at once. Change one thing, test, undo if it didn't work. Repeat. This is how every developer alive does this.</p>
+      </li>
+    </ol>
+
+    <h3>Where to get help (free, friendly)</h3>
+    <ul>
+      <li><a href="https://www.reddit.com/r/webdev/" target="_blank" rel="noopener">r/webdev</a> — general web development</li>
+      <li><a href="https://www.reddit.com/r/learnprogramming/" target="_blank" rel="noopener">r/learnprogramming</a> — beginners welcome</li>
+      <li><a href="https://www.reddit.com/r/Entrepreneur/" target="_blank" rel="noopener">r/Entrepreneur</a> — business + tech questions</li>
+      <li><a href="https://stackoverflow.com" target="_blank" rel="noopener">Stack Overflow</a> — search before posting</li>
+      <li><a href="https://www.indiehackers.com" target="_blank" rel="noopener">Indie Hackers</a> — solo founders / makers</li>
+      <li>Cursor and Cal.com both have active Discord servers — search their site footer</li>
+    </ul>
+
+    <div class="warn">
+      <p><strong>Avoid: paid courses promising "build a website in 1 day" for $497.</strong> Almost everything in those is on YouTube for free, or in this guide. Save your money for your domain and your first ad spend.</p>
+    </div>
+
+    <h3>You're done. Now go ship it.</h3>
+    <p>Reading is not building. The fastest way to learn is to <strong>build a bad version first, then improve it</strong>. Your first website will be embarrassing. So was every famous founder's. Ship it anyway.</p>
+
+    <ul class="checklist" data-store="final">
+      <li>I have a live website URL I can send to someone</li>
+      <li>My main button does what it's supposed to do</li>
+      <li>I tested the site on my phone</li>
+      <li>If I have a form, I tested submitting it and the message arrived</li>
+      <li>I sent the URL to at least 3 humans and asked for feedback</li>
+      <li>I'm not waiting for it to be "perfect" before showing anyone</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <h2>One last <span class="accent">thing.</span></h2>
+    <p>This guide is built to be free and remain free. No ads. No affiliate links. Every tool recommended was chosen because it's the best, not because it pays us.</p>
+    <p>If this helped you, the best thing you can do is share it with someone else who needs it. Real link, no tracking — copy the URL of this page and send it to a friend who's been wanting to build a website but doesn't know how.</p>
+
+    <div class="wt-footer-logo">
+      <div class="wt-word-big">WRENTECH</div>
+      <div class="wt-tag-line">Rapid build studio · Erwin, Tennessee · <a href="https://wrentech.net" target="_blank" rel="noopener">wrentech.net</a></div>
+    </div>
+
+    <p>WRENTECH builds custom sites, AI tools, and operating systems for solo founders and small businesses. If this guide got you 80% of the way there but you'd rather hand off the rest — that's what we do.</p>
+    <a class="wt-cta-pill" href="https://wrentech.net" target="_blank" rel="noopener">Work with us →</a>
+
+    <p style="margin-top: 40px; font-size: 0.9rem; opacity: 0.6; font-family: 'Sansita', Georgia, serif; font-style: italic; font-weight: 400;">Built with stubborn care. Made for people who were told they couldn't do this. v1.0 · feedback welcome · the internet changes · some tools or prices may have moved · the West Method™ way: ship the imperfect thing now, refine in public.</p>
+  </div>
+</footer>
+
+<!-- ============ SCRIPTS ============ -->
+<script>
+// Progress bar
+const progressBar = document.getElementById('progressBar');
+const progressLabel = document.getElementById('progressLabel');
+function updateProgress() {
+  const h = document.documentElement;
+  const b = document.body;
+  const st = 'scrollTop';
+  const sh = 'scrollHeight';
+  const pct = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
+  const clamped = Math.min(100, Math.max(0, pct));
+  progressBar.style.width = clamped + '%';
+  progressLabel.textContent = Math.round(clamped) + '% read';
+}
+window.addEventListener('scroll', updateProgress, { passive: true });
+updateProgress();
+
+// Menu / TOC overlay
+const menuBtn = document.getElementById('menuBtn');
+const tocOverlay = document.getElementById('tocOverlay');
+const closeToc = document.getElementById('closeToc');
+menuBtn.addEventListener('click', () => tocOverlay.classList.add('open'));
+closeToc.addEventListener('click', () => tocOverlay.classList.remove('open'));
+tocOverlay.addEventListener('click', (e) => {
+  if (e.target === tocOverlay) tocOverlay.classList.remove('open');
+});
+// Close menu after clicking a link
+document.querySelectorAll('.toc-list a').forEach(a => {
+  a.addEventListener('click', () => tocOverlay.classList.remove('open'));
+});
+// Escape closes menu
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') tocOverlay.classList.remove('open');
+});
+
+// Tabs
+document.querySelectorAll('.tabs').forEach(tabGroup => {
+  const buttons = tabGroup.querySelectorAll('.tab-buttons button');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const target = btn.dataset.tab;
+      tabGroup.querySelectorAll('.tab-content').forEach(tc => {
+        tc.classList.toggle('active', tc.id === target);
+      });
+    });
+  });
+});
+
+// Decision tree
+const decisionResults = {
+  'path-a': { name: 'Path A — Drag-and-Drop', detail: 'You\'re going to use Carrd or Framer. No code. Live this weekend. Jump to Module 4 to set up your accounts.' },
+  'path-b': { name: 'Path B — AI builds it', detail: 'You\'re going to describe your site to Claude or v0, get the code, and deploy it. Best balance of speed + customization. Jump to Module 4.' },
+  'path-c': { name: 'Path C — You + AI code together', detail: 'You\'re going to install Cursor, build with AI help inside it, and push to GitHub. Most flexibility, longer first-time. Jump to Module 4 then 14.' }
+};
+document.querySelectorAll('.decision-choices button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const r = decisionResults[btn.dataset.result];
+    if (!r) return;
+    document.getElementById('path-name').textContent = r.name;
+    document.getElementById('path-detail').textContent = r.detail;
+    document.getElementById('path-result').classList.add('show');
+  });
+});
+
+// Checklists with localStorage persistence
+document.querySelectorAll('.checklist').forEach(list => {
+  const key = 'checklist:' + (list.dataset.store || Math.random());
+  let saved = {};
+  try { saved = JSON.parse(localStorage.getItem(key) || '{}'); } catch(e) {}
+  list.querySelectorAll('li').forEach((li, i) => {
+    if (saved[i]) li.classList.add('done');
+    li.setAttribute('role', 'checkbox');
+    li.setAttribute('tabindex', '0');
+    li.setAttribute('aria-checked', li.classList.contains('done'));
+    const toggle = () => {
+      li.classList.toggle('done');
+      saved[i] = li.classList.contains('done');
+      li.setAttribute('aria-checked', saved[i]);
+      try { localStorage.setItem(key, JSON.stringify(saved)); } catch(e) {}
+    };
+    li.addEventListener('click', toggle);
+    li.addEventListener('keydown', (e) => {
+      if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); toggle(); }
+    });
+  });
+});
+</script>
+
+</body>
+</html>
